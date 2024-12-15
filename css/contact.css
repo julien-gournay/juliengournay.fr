@@ -1,0 +1,101 @@
+/* ----- Configuration sections page ----- */
+section {     /* ----- Toute section ----- */
+    display: flex;
+}
+#sec-1{
+    background-color: var(--color-bg2);
+    color: var(--color-text2);
+    align-items: center; /* Centré sur la longeur */
+    justify-content: center; /* Centré sur la largeur */
+    text-align: center; /* Centré dans la div */
+    height: 100vh
+}
+#sec-2{
+    background: var(--color-bg1);
+    color: var(--color-text1);
+    justify-content: center; /* Centré sur la largeur */
+}
+
+
+/* SECTION 1*/
+#sec-1 h1 {
+	position: flex;
+    text-align: center;
+	background: linear-gradient(90deg, #FF0000, #8F00FF);
+    /*background: linear-gradient(90deg, #FFFFFF, #666666);*/
+	background-size: 400%;
+    font-weight: 1500;
+    font-size: 15vw;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: animate 5s linear infinite alternate;
+}
+@keyframes animate {
+	0% {
+		background-position: 0%;
+	}
+
+	100% {
+		background-position: 100%;
+	}
+}
+.p1{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(1rem,1.5vw,1.5rem);
+    max-width: 40rem;
+    margin-top: 2%;
+    padding: 0 2rem ;
+}
+
+/* SECTION 2*/
+h1{
+    font-size: clamp(3rem,5vw,7rem) ;   /*clamp permet de définir une taille minimum et */
+    background: linear-gradient(90deg, #FF0000, #8F00FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.formulaire {
+    margin: 8%;
+}
+  
+.champ {
+    margin-bottom: 15px;
+}
+  
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+button:hover{
+    background: linear-gradient(90deg, #FF0000, #8F00FF);
+}
+select {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+option {
+    padding: 10px;
+    color: #555555;
+    cursor: pointer;
+}
+  
+option:hover {
+    background-color: #eee;
+}
+  
+option:selected {
+    background-color: #000;
+    color: #fff;
+}

@@ -1,0 +1,61 @@
+:root{
+    --gris: #0E0E0E;
+    --rouge: #FF0000;
+    --violet: #8f008f;
+    --orange: #ff4c29;
+    --d: linear-gradient(90deg, #FF0000, #8F00FF);
+    
+    --color-bg1: #ffffff;
+    --color-bg2: #f4f4f4;
+    --color-bg3: #0E0E0E;
+    --color-bg4: #ff9681;
+    --color-bg5: #81ddff;
+    --color-text1: #0E0E0E;
+    --color-text2: #ffffff;
+    --color-text3: #666666;
+    --color-text4: #ff4c29;
+    --color-text5: #299fff;
+}
+
+.dark-theme{ /* Couleur lors du theme sombre */
+    --color-bg1: #0E0E0E;
+    --color-bg2: #000000;
+    --color-bg3: #ffffff;
+    --color-bg4: #ff4c29;
+    --color-bg5: #299fff;
+    --color-text1:#edf2fc;
+    --color-text2: #000000;
+    --color-text3: #a9a9a9;
+    --color-text4: #ff9681;
+    --color-text5: #81ddff;
+}
+
+
+.orange-themeUser{ /* Couleur lors du theme user */
+    --color-bg2: #ff4c29;
+
+}
+
+
+
+
+
+/* ----- FOOTER ----- */
+.footer {
+    display: flex;
+    background: var(--d);
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.footerp{
+    font-size: 1rem;
+}
+.footer_link{
+    gap: 1rem;
+    display: flex;
+}
+.footer_link a{
+    color: var(--color-text2);
+}

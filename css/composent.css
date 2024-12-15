@@ -1,0 +1,129 @@
+/* ----- BOUTON SCROOL ----- */
+.scroll-down{
+    height: 50px;
+    width: 30px;
+    border: 2px solid var(--color-text1);
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after{
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid var(--color-text1);
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%,-100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::after{
+    top: 30%;
+    animation-delay: .3s;
+}
+@keyframes scroll-down{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 90%;
+    }
+}
+
+
+
+
+/* CHIP */
+.cd-icon {
+  --size: 1em;
+  font-size: var(--size);
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  color: inherit;
+  fill: currentColor;
+  line-height: 1;
+  flex-shrink: 0;
+  max-width: initial;
+  margin-left: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.cd-icon use { /* SVG symbols - enable icon color corrections */
+  color: inherit;
+  fill: currentColor;
+}
+.chip {
+  /* reset */
+  border: 0;
+  color: inherit;
+  line-height: 1;
+  -webkit-appearance: none;
+          appearance: none;
+
+  display: inline-flex;
+  align-items: center;
+  border-radius: 50em;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.chip--error {
+  background-color: var(--orange);
+  color: var(--color-text1);
+}
+.chip--warning {
+  background-color: rgb(255, 228, 110);
+  color: #0E0E0E;
+}
+.chipli {
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: 5%;
+  margin-top: 1rem;
+}
+.chip__label {
+  padding: 0.4rem 0.9rem;
+
+}
+.chip__icon-wrapper {
+  display: flex;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: var(--color-bg3);
+  color: var(--orange)
+}
+
+
+
+
+button{
+  -webkit-appearance: none;
+  border: 0px;
+  border-radius: 20px;
+  padding: 12px 25px;
+  cursor: pointer;
+  background: var(--color-bg3);
+  color: var(--color-text2);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+}

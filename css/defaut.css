@@ -1,0 +1,236 @@
+/* ----- Propriété du site -----*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: 'Product Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body{
+  background: var(--color-bg1);
+  overflow-x: hidden;
+}
+
+@import url('http://fonts.cdnfonts.com/css/product-sans');
+
+/* ----- BARRE DE NAVIGATION ----- */
+.navbar {
+  position: absolute;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.navbar-menu {
+  position: absolute;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.navbar a {     /* ----- Barre ----- */
+    color: var(--color-text1);
+    text-decoration: none;
+}
+.navbar .logo {     /* ----- Logo navbar ----- */
+    font-size: 2em;
+    font-weight: bold;
+}
+.navbar .nav-links ul {
+    display: flex;
+    list-style-type: none;
+    text-decoration-line: none;
+    flex-wrap: wrap;
+}
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+.navbar .nav-links ul li.active a {
+    color: var(--color-text1);
+    font-weight: 600;
+}
+.navbar .nav-links ul li a:hover{
+    color: #ff4c29;
+}
+.navright{
+  display: flex;
+  gap: 1rem;
+}
+#icon {
+  display: flex;
+  width: 2rem;
+  object-fit: fill;
+  cursor: pointer;
+}
+.button_cv{
+  background-color: var(--color1);
+  cursor: pointer;
+}
+.button_cv:hover{
+  background: var(--orange);
+}
+#logoName {
+    width: 100px;
+    cursor: pointer;
+}
+/* ----- BARRE DE NAVIGATION MOBILE ----- */
+
+
+/* ----- SCROOL BAR ----- */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--color-bg3);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  /*box-shadow: 0 -100vh 0 100vh var(--orange);*/ /* background all bar */
+}
+
+/* ----- TEXTE SELECTIONNE ----- */
+a p::selection,a h2::selection,a h3::selection{
+  background-color : blue;
+  color : #fff
+}
+::selection{
+  background-color : var(--orange);
+  color : #fff
+}
+
+
+
+
+
+/* ----- FOOTER ----- */
+footer{
+  display: block;
+  /*padding: 4rem 9.375rem;*/
+  padding: 5%;
+  justify-content: center;
+  align-items: center;
+}
+.footer{
+  flex-shrink: 0;
+  align-items: flex-start;
+}
+.footer a{
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+}
+.footer-link{
+  height: fit-content;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.75rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.footer-logo{
+  /*width: 20rem;*/
+  width: fit-content;
+  height: fit-content;
+  flex-shrink: 0;
+}
+.footer-liens{
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 4rem;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+.footer-boite{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 8rem;
+  gap: 1rem;
+}
+footer h4, footer p{
+  color: var(--color-text1);
+  width: fit-content;
+}
+.footer-boite p{
+  color: var(--color-text1);
+  /* Paragraph/Small/Normal */
+  /*font-family: Inter;*/
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 171.429% */
+  letter-spacing: -0.00875rem;
+  width: 100%;
+}
+footer a:hover{
+  background: linear-gradient(90deg, #FF0000, #8F00FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+.footer-plus{
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  /*gap: 23rem;*/
+  flex-shrink: 0;
+  margin-top: 2.75rem;
+  justify-content: space-between;
+}
+.footer-plus p{
+  /*width: 100%;*/
+}
+.footer-logo-img{
+  height: 5rem;
+  width: 100%;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+}
+.linefooter{
+  border: 1px solid var(--color-bg3);
+  border-radius: 5px;
+}
+.footer-plus-p{
+  color: var(--color-text1);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+}
+.footer-cercle{
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.footercercle{
+  display: flex;
+  padding: 0.75rem;
+  align-items: flex-start;
+  border-radius: 3rem;
+  background-color: var(--color-bg3);
+}
+.footer-icon{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.footer-cercle img{
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(0%) sepia(3%) saturate(39%) hue-rotate(329deg) brightness(102%) contrast(100%);
+}
+
+
+@media (max-width: 768px) { /* Ajuster la largeur en fonction de vos besoins */
+
+}

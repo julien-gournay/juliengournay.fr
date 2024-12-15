@@ -1,0 +1,70 @@
+/* ----- Configuration sections page ----- */
+section {
+    width: 100%;
+    display: flex;
+}
+#sec-1{
+    background-color: var(--color-bg2);
+    background-size: cover;
+    color: var(--color-text1);
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+}
+#sec-2{
+    color: var(--color-text1);
+    display: flex;
+    flex-direction: row;
+    padding: 6%;
+    gap: 2rem;
+}
+
+
+#sec-1 h1 {
+	position: flex;
+    text-align: center;
+	background: linear-gradient(90deg, #FF0000, #8F00FF);
+    /*background: linear-gradient(90deg, #FFFFFF, #666666);*/
+	background-size: 400%;
+    font-weight: 1500;
+    font-size: 15vw;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: animate 5s linear infinite alternate;
+}
+
+h3{
+    font-weight: 600;
+    color: var(--orange);
+}
+.partie ul{
+    margin: 0rem 1rem;
+    gap: 0.3rem;
+    display: flex;
+    flex-direction: column;
+}
+.partie{
+    margin: 1rem 0rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.menu{
+    width: 30rem;
+}
+.menu a{
+    color: var(--color-text1);
+}
+.menudiv{
+    position: sticky;
+    top: 10%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.menudiv ol{
+    margin: 0rem 1rem;
+    gap: 0.3rem;
+    display: flex;
+    flex-direction: column;
+}

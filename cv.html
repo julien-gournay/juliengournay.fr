@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CV Julien Gournay</title>
+    <link rel="stylesheet" type="text/css" href="css/cv.css">
+    <meta http-equiv="Refresh" content="2; url=https://juliengournay.fr/files/cv_julien.pdf" />
+  </head>
+  <body>
+    <div class="loading">
+        <h1 id="titre">CHARGERMENT DU CV ...</h1>
+        <p>Veillez patienter le temps que la page charge</p>
+        <p>Si la page n'apparait pas dans quelques secondes, <a href="https://juliengournay.fr/files/cv_julien.pdf">cliquez ici</a>.</p>
+        <br>
+        <p>Mise a jour le 25 juillet 2024.</p>
+    </div>
+
+    <script type="text/javascript">
+        texte = new Array();
+        texte[0] = "CHARGERMENT DU CV .";
+        texte[1] = "CHARGERMENT DU CV ..";
+        texte[2] = "CHARGERMENT DU CV ...";
+        nb=-1;
+        function titre()
+        {
+        if(nb==texte.length-1)
+        {nb=0;}else
+        {nb++;}
+        document.getElementById("titre").innerHTML=texte[nb];
+        }
+        setInterval("titre()",500);
+    </script>
+  </body>
+</html>

@@ -229,8 +229,27 @@ footer a:hover{
   height: 1.5rem;
   filter: invert(0%) sepia(3%) saturate(39%) hue-rotate(329deg) brightness(102%) contrast(100%);
 }
-
-
 @media (max-width: 768px) { /* Ajuster la largeur en fonction de vos besoins */
 
+}
+
+
+.popup{
+  position: absolute;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  top: 6rem;
+  background-color: var(--orange);
+  border-radius: 30px;
+  color: white;
+  margin: 0 2rem;
+}
+.popup a{
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--blanc);
 }

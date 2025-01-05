@@ -445,12 +445,3 @@ h3{
 a {
   text-decoration: none;
 }
-
-
-
-.popup{
-  background-color: var(--orange);
-  width: 10rem;
-  height: 3rem;
-  display: flex;
-}

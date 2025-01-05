@@ -24,6 +24,8 @@
 
     <!-- SECTION 1 : EN TETE -->
     <section id="sec-1">
+        <?php include 'php/alertes.php'; ?>
+        
         <div class="wrapper">
             <div class="static-txt">Je suis étudiant</div>
             <ul class="dynamic-txts">

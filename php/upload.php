@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $format = $_POST['format'];
 
     // Traitement du fichier
-    $target_dir = "C:/wamp64/www/dev.juliengournay.fr/files/";
+    $target_dir = "C:/wamp64/www/juliengournay.fr/files/";
     $original_filename = basename($_FILES["fichier"]["name"]);
     // Remplacer les espaces par des underscores
     $safe_filename = str_replace(' ', '_', $original_filename);

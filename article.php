@@ -45,6 +45,28 @@
             $duree = $tab[12];
             break;
         }
+
+        $date = new DateTime($datePublication); // Création de l'objet DateTime
+        $formattedDate = $date->format('d F Y à H\hi'); // Formatage de la date
+
+        $moisFrancais = [ // Traduction des mois en français
+            'January' => 'janvier',
+            'February' => 'février',
+            'March' => 'mars',
+            'April' => 'avril',
+            'May' => 'mai',
+            'June' => 'juin',
+            'July' => 'juillet',
+            'August' => 'août',
+            'September' => 'septembre',
+            'October' => 'octobre',
+            'November' => 'novembre',
+            'December' => 'décembre'
+        ];
+
+        foreach ($moisFrancais as $anglais => $francais) { // Remplacement du mois en anglais par le mois en français
+            $formattedDate = str_replace($anglais, $francais, $formattedDate);
+        }
     ?>
 
     <!-- NAVBAR -->
@@ -56,7 +78,7 @@
                 <div class="cadre-info-text">
                     <div>
                         <?php print("<h1>$titre</h1>"); ?>
-                        <?php print("<p class=\"pdate\">$datePublication | $duree min de lecture</p>"); ?>
+                        <?php print("<p class=\"pdate\">$formattedDate | $duree min de lecture</p>"); ?>
                     </div>
                     <?php print("<p class=\"pdescription\">$description</p>"); ?>
                 </div>

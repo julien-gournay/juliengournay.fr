@@ -2,7 +2,7 @@
 <head>
     <!-- HEAD -->
     <?php include 'head.php'; ?>
-    <title>Julien Gournay</title>
+    <title>Veille technologique - Julien Gournay</title>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/veille-techno.css">
 
@@ -37,19 +37,30 @@
     </section>
 
     <section id="sec-2">
+        <img class="cover" src="img/sssquiggly.svg" alt="">
         <div class="sujet">
-            <img class="cover" src="img/ia.jpg" alt="">
             <div class="card-info">
-                <h2>L'accésibilité de L'IA au grand public</h2>
-                <p>Depuis maintenant plusieurs années des intélligences artificielle voit le jour mais depuis 2023, le developpement c'est accéléré avec l'appartition de l'open source "ChatGPT".<br><br>L'apparition de nombreuse IA font suite, mais souvent accésible qu'en Bêta, à certaine personne ou même payant. Mais avec la démocratisation de cette outil et du lancement des IA par les mastodons du secteur, les chatbots et assitants intéligent deviennt de plus en plus accésible au grand public.<br><br>En 2024, l'IA est partout, dans nos téléphones, réseaux sociaux, messages, dans les entreprises, dans le domaine de la santé ...</p>
-            </div>
-        </div>
-    </section>
+                <div class="card-info-ctn">
+                    <h2>L’utilisation des assistants vocaux peut-il révolutionner notre quotidien ?</h2>
+                    <div class="infinite-scroll-container">
+                        <div class="scrolling-text">
+                            <span> Contexte <span style="color: var(--orange);">Veille Technologique</span> Contexte <span style="color: var(--orange);">Veille Technologique</span> Contexte <span style="color: var(--orange);">Veille Technologique</span> Contexte <span style="color: var(--orange);">Veille Technologique </span></span>
+                            <span> Contexte <span style="color: var(--orange);">Veille Technologique</span> Contexte <span style="color: var(--orange);">Veille Technologique</span> Contexte <span style="color: var(--orange);">Veille Technologique</span> Contexte <span style="color: var(--orange);">Veille Technologique </span></span>
+                        </div>
+                    </div>
+                    <p>Les assistants vocaux (comme Siri, Alexa, Google Assistant) font partie intégrante de notre quotidien. Ils sont utilisés dans divers domaines : domotique, santé, éducation, divertissement, etc. Le sujet de cette veille est de déterminer dans quelle mesure ces technologies peuvent véritablement révolutionner notre manière de vivre.</p>
+                </div>
 
-    <section id="sec-3">
-        <div id="sec3-div1">
-            <h2>Qu'est ce que l'Intelligence Artificielle ?</h2>
-            <p>L'intélligence artificielle (IA) ou en anglais Artificial Intelligence est un outil utilisé par une machine afin de reproduire des comportements liés aux humains, tels que le raisonnement, la planification et la créativité.<br>L'IA fonctionne grâce à du Machine Learning, une technologie qui vise à apprendre aux IA à tirer des enseignements des données et à s'améliorer avec l'expérience, au lieu d'être explicitement programmées pour le faire. Plus on l'utilise et apporte du savoir, plus elle sera puissante.</p>
+                <div class="card-info-ctn">
+                    <div class="infinite-scroll-container">
+                        <div class="scrolling-text">
+                            <span> Qu'est ce qu'un assistant vocal ? <span style="color: var(--orange);">Qu'est ce qu'un assistant vocal ?</span> Qu'est ce qu'un assistant vocal ? <span style="color: var(--orange);">Qu'est ce qu'un assistant vocal ? </span></span>
+                            <span> Qu'est ce qu'un assistant vocal ? <span style="color: var(--orange);">Qu'est ce qu'un assistant vocal ?</span> Qu'est ce qu'un assistant vocal ? <span style="color: var(--orange);">Qu'est ce qu'un assistant vocal ? </span></span>
+                        </div>
+                    </div>
+                    <p>Un assistant vocal est un logiciel capable de comprendre et de répondre à des commandes vocales données par un utilisateur. En s'appuyant sur des technologies telles que la reconnaissance vocale, le traitement du langage naturel (NLP, Natural Language Processing) et l'intelligence artificielle (IA), il permet d'interagir avec des appareils numériques de manière intuitive et sans nécessiter d’interface physique.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -95,6 +106,5 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/mode_sombre.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-
 </body>
 </html>

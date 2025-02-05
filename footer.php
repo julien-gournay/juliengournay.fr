@@ -41,9 +41,9 @@
         </div>
         <hr class="line"/>
         <div class="footer-plus">
-            <p class="footer-plus-p">Copyright ©2024 Julien Gournay</p>
+            <p class="footer-plus-p">Copyright ©2024-2025 Julien Gournay</p>
             <a href="login.php"><p class="footer-plus-p">Espace Admin</p></a>
-            <a href="https://github.com/julien-gournay/juliengournay.fr/releases/tag/v1.0.1"><p class="footer-plus-p">Version 1.0.1</p></a>
+            <a href="https://github.com/julien-gournay/juliengournay.fr/releases/tag/v1.2.0"><p class="footer-plus-p">Version 1.2.0</p></a>
             <!--<div class="footer-cercle">
                 <a href="https://github.com/julien-gournay"><div class="footercercle">
                     <img id="logosvg6" class="footer-icon1" src="img/logo/github_min.svg" alt="">

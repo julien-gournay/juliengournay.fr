@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
     <?php include 'head.php'; ?>
-    <title>Download - Julien Gournay</title>
-
+    <title>BTS SIO - Julien Gournay</title>
     <link rel="stylesheet" type="text/css" href="css/btssio.css">
 
     <!-- Google tag (gtag.js) -->
@@ -39,18 +39,23 @@
                 </div>
                 <div class="sec2-text-info">
                     <div class="sec2-text-info-des">
-                        <p class="des_p">Le BTS SIO est un diplôme de niveau Bac+2 qui forme les futurs techniciens en informatique. Il prépare à exercer des métiers variés dans le domaine des technologies de l'information, que ce soit dans les petites entreprises ou les grandes organisations.</p>
+                        <p class="des_p">Le BTS SIO est un diplôme de niveau Bac+2 qui forme des techniciens en informatique. Il prépare à divers métiers dans le domaine des technologies de l'information, aussi bien au sein de petites entreprises que de grandes organisations.</p>
                     </div>
                 </div>
             </div>
             <div class="sec2-box">
                 <div class="sec2-boite">
-                    <div class="box-icon">
-                        <p>SLAM</p>
+                    <div class="sec2-boite-header">
+                        <div class="box-icon">
+                            <p>SLAM</p>
+                        </div>
+                        <div class="box-tag">
+                            <p>Mon choix</p>
+                        </div>
                     </div>
                     <div class="box-text">
                         <h4 class="">Solutions logicielles et applications métiers</h4>
-                        <p class="">Cette spécialité est plus orientée vers le développement d'applications. Les diplômés sont capables de concevoir, de développer et de mettre en œuvre des logiciels adaptés aux besoins spécifiques d'une entreprise.</p>
+                        <p class="">Cette spécialité est axée sur le développement d’applications. Les diplômés sont capables de concevoir, développer et déployer des logiciels répondant aux besoins spécifiques des entreprises.</p>
                     </div>
                 </div>
                 <div class="sec2-boite">
@@ -59,7 +64,7 @@
                     </div>
                     <div class="box-text">
                         <h4 class="">Solutions d'infrastructure, systèmes et réseaux</h4>
-                        <p class="">Cette spécialité forme les futurs administrateurs systèmes et réseaux. Les diplômés sont capables d'installer, de configurer et de maintenir les infrastructures informatiques d'une entreprise.</p>
+                        <p class="">Cette spécialité forme les futurs administrateurs systèmes et réseaux. Les diplômés sont en mesure d’installer, de configurer et de maintenir les infrastructures informatiques d’une entreprise, garantissant ainsi leur performance et leur sécurité.</p>
                     </div>
                 </div>
             </div>
@@ -77,27 +82,28 @@
             </div>
             <div class="sec3-box">
                 <div class="sec3-boite">
-                    <figure><img src="https://juliengournay.fr/img/experience/nordcompo.jpg" alt=""></figure>
+                    <figure><img src="https://nordcompo.fr/app/uploads/2020/02/accueil_bg.jpg" alt=""></figure>
                     <div>
                         <h4>Nord Compo</h4>
                         <p class="sec3-boite-date">13 mai au 29 juin 2024</p>
                     </div>
-                    <p class="des_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla tellus, semper dictum tortor a, tempus iaculis mi. Vestibulum pretium in mi sed sollicitudin. Aenean et rutrum ligula.</p>
-                    <div>
+                    <p class="des_p">Lors de ma première année de BTS SIO, j'ai réalisé un stage chez Nord Compo. Pendant ces 7 semaines, ma mission était de concevoir un dashboard pour les collaborateurs, leur permettant de visualiser le statut des serveurs NAS.</p>
+                    <div class="sec3-boite-bt">
                         <button onclick="location.href='files/stage/rapport_stage_nordcompo'" class="button_cv">Rapport de stage</button>
                         <button onclick="location.href='files/stage/certificat_stage_nordcompo'" class="button_cv">Certificat de stage</button>
                     </div>
                 </div>
                     
                 <div class="sec3-boite">
-                    <figure><img src="https://juliengournay.fr/img/recherche_stage_2025.png" alt=""></figure>
+                    <figure><img src="img/experience/villeTourcoing.jpg" alt=""></figure>
                     <div>
-                        <h4>Prochainement</h4>
+                        <h4>Ville de Tourcoing</h4>
                         <p class="sec3-boite-date">24 février au 04 avril 2025 </p>
                     </div>
-                    <p class="des_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla tellus, semper dictum tortor a, tempus iaculis mi. Vestibulum pretium in mi sed sollicitudin. Aenean et rutrum ligula.</p>
-                    <div>
-                        <button onclick="location.href='stage-2025.html'" class="button_cv">Ma candidature</button>
+                    <p class="des_p">En février, je vais effectuer un stage de six semaines dans les locaux de la Mairie de Tourcoing. Ce stage sera une nouvelle occasion d’apprendre de nouvelles méthodes de développement et de valider mon BTS.</p>
+                    <div class="sec3-boite-bt">
+                        <button onclick="location.href='files/stage/convention_stage_mtourcoing'" class="button_cv">Convention de stage</button>
+                        <button onclick="location.href='#'" class="button_cv" disabled>Certificat de stage (indisponible)</button>
                     </div>
                 </div>
             </div>
@@ -108,13 +114,13 @@
         <div class="sec4-frame">
             <div class="sec4-text">
                 <h3>Mes certifications et<br>compétences</h3>
-                <div>
-                    <button onclick="location.href=''" class="button_cv">Voir tout les diplômes et certifications</button>
+                <div class="sec4-text-bt">
+                    <button onclick="location.href='experience.php'" class="button_cv">Voir tout les diplômes et certifications</button>
                     <button onclick="location.href='files/tableau_synthese_slam.xlsx'" class="button_cv">Télécharger mon tableau des compétences</button>
                 </div>
             </div>
             <div class="sec4-box">
-
+                
             </div>
         </div>
     </section>
@@ -134,7 +140,22 @@
         </div>
     </section>
 
+    <section id="sec-6">
+        <div class="sec6-frame">
+            <div class="sec6-text">
+                <h3>Centre de documentation pour les cours</h3>
+                <div>
+                    <button onclick="location.href='veille-technologique.php'" class="button_cv">Accéder à l'espace</button>
+                </div>
+            </div>
+            <div class="sec6-img">
+                <img src="img/2023.png" alt="">
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <?php include 'footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
 </html>

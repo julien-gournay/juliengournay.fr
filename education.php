@@ -121,7 +121,7 @@
                                                 $stageEntreprise = $tab[1];
                                                 $stageLien = $tab[2];
                                                 
-                                                echo("<a href=\"$stageLien\">- $stageNom $stageEntreprise</a>");
+                                                echo("<a href=\"$stageLien\">- $stageNom $stageEntreprise</a><br>");
                                             }
                                             echo("</div></div>");
                                         };

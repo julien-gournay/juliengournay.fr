@@ -61,11 +61,12 @@
     <section id="sec-2">
         <nav class="navAdmin">
             <div class="navAdmin-links nav-portfolio"> <!-- Menu Admin -->
-                <button onclick="openTab(0)" class="active">Dashboard</button>
-                <button onclick="openTab(1)">Document+</button>
-                <button onclick="openTab(2)">Veille+</button>
-                <button onclick="openTab(3)">Ressource</button>
-                <button onclick="openTab(4)">Stat</button>
+                <button data-index="0" class="active">Dashboard</button>
+                <button data-index="1">Alertes+</button>
+                <button data-index="2">Document+</button>
+                <button data-index="3">Veille+</button>
+                <button data-index="4">Ressource</button>
+                <button data-index="5">Stat</button>
             </div>
             <div class="navAdmin-deco">
                 <form action="php/deconnexion.php" method="post">
@@ -76,6 +77,36 @@
 
         <div class="tab-content" id="dashboard" style="display: block"> <!-- div grille carte -->
             <h3>Dashboard</h3>
+        </div>
+
+        <div class="tab-content" id="document">
+            <h3>Alertes +</h3>
+
+            <form action="" method="post" enctype="multipart/form-data">
+                <label for="message">Message:</label>
+                <textarea id="description" name="message"></textarea><br>
+
+                <label for="format">Type d'alerte:</label>
+                <select name="format" id="format">
+                    <option value="Information">Information</option>
+                    <option value="XLSX">XLSX</option>
+                    <option value="DOCS">DOCS</option>
+                    <option value="TXT">TXT</option>
+                    <option value="PPT">PPT</option>
+                    <option value="ZIP">ZIP</option>
+                    </select><br>
+
+                <label for="type">Affichage:</label>
+                <input type="checkbox" id="type" name="1" required><br>
+
+                <label for="fichier">Date de début:</label>
+                <input type="date" name="fichier" id="fichier" required><br>
+
+                <label for="fichier">Date de fin:</label>
+                <input type="date" name="fichier" id="fichier" required><br>
+
+                <input type="submit" value="Envoyer">
+            </form>
         </div>
 
         <div class="tab-content" id="document">

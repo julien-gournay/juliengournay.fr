@@ -79,6 +79,11 @@
                     <label for="message">Pièce jointe :</label>
                     <input type="file" name="file" id="file">
                 </div>
+
+                <!--<input type="text" name="honeypot" style="display:none;">
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                <div class="g-recaptcha" data-sitekey="6Leq1soqAAAAAOjU7LMo09GSDwTJQm6qksoBAyT-"></div>-->
+
                 <button type="submit">Envoyer</button>
             </form>
             <div class="message-container" id="message-container"></div>

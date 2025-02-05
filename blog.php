@@ -69,7 +69,17 @@
                                 <img class=\"imgcover\" src=\"$imgConverture\" alt=\"\">
                             </div>
                             <div class=\"cadre-info\">
-                                <div class=\"cadre-info2\">    
+                                <div class=\"cadre-info2\"> 
+                                    <div class=\"tags\">");
+                                    if($tab[10] != null){
+                                        $tags = json_decode($tab[10], true);
+                                        if($tags){
+                                            foreach ($tags as $tag) {
+                                                echo("<span class=\"tag\">$tag</span>");
+                                            }
+                                        }
+                                    }
+                                    echo("</div>
                                     <h4>$titre</h4>
                                     <p class=\"pdescription\">$description</p>
                                 </div>

@@ -177,7 +177,7 @@ article {     /* ----- Titre ----- */
 
     min-block-size: 200vh;
     min-inline-size: 100%;
-    padding: 5vmin;
+    padding: 6%;
     box-sizing: border-box;
     display: grid;
     place-content: center;
@@ -192,7 +192,7 @@ article {     /* ----- Titre ----- */
 .scroolh1 {
     font-size: 10vmin;
     line-height: 1.1;
-    max-inline-size: 15ch;
+    max-inline-size: 23ch;
     margin: auto;
     justify-content: center;
 }
@@ -379,7 +379,7 @@ h3{
 .sec5-text-info-bou-cv:hover{
   cursor: pointer;
   background: black;
-  color: white;
+  -webkit-text-fill-color: white; 
 }
 
 .sec5-box{

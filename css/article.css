@@ -93,7 +93,7 @@ section {
 }
 .plire{
     position: absolute;
-    top: 40rem;
+    bottom: 5%;
     font-weight: 800;
     text-decoration: none;
     columns: var(--color-text1);

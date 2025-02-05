@@ -42,6 +42,14 @@ section {     /* ----- Toute section ----- */
     align-items: center;
     background-color: var(--color-bg2);
 }
+#sec-6{
+    display: flex;
+    min-height: 80vh;
+    padding: 4.75rem 9.375rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg1);
+}
 
 a{
     text-decoration: none;
@@ -52,7 +60,8 @@ a{
 	background: linear-gradient(90deg, #FF0000, #8F00FF);
     /*background: linear-gradient(90deg, #FFFFFF, #666666);*/
 	background-size: 400%;
-    font-weight: 1500;
+    /*font-weight: 1500;*/
+    font-weight: revert;
     font-size: 15vw;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
@@ -138,13 +147,26 @@ h3{
     border-radius: 0.75rem;
     background-color: var(--color-bg2);
 }
-.box-icon{
+.sec2-boite-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.box-icon, .box-tag{
     display: flex;
     padding: 1rem;
     align-items: flex-start;
     gap: 0.625rem;
     border-radius: 0.5rem;
     background: var(--color-bg1);
+    height: fit-content;
+}
+.box-tag{
+    padding: 0.8rem 1.3rem;
+    height: fit-content;
+    border-radius: 3rem;
+    background: var(--color4);
 }
 .box-icon p{
     color: var(--color4);
@@ -153,6 +175,13 @@ h3{
     font-weight: 700;
     line-height: 3.5rem; /* 116.667% */
     letter-spacing: -0.06rem;
+}
+.box-tag p{
+    color: var(--color-bg1);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.02rem;
 }
 .box-text{
     display: flex;
@@ -277,6 +306,11 @@ figure:hover+span {
     line-height: 1.5rem; /* 150% */
     letter-spacing: -0.03rem;
 }
+.sec3-boite-bt{
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
 
 /* ----- SECTION 4 ----- */
 .sec4-frame{
@@ -308,6 +342,11 @@ figure:hover+span {
     -webkit-text-fill-color: transparent;
     display: flex;
     text-align: center;
+}
+.sec4-text-bt{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 
@@ -341,4 +380,49 @@ figure:hover+span {
     -webkit-text-fill-color: transparent;
     display: flex;
     text-align: center;
+}
+
+
+
+/* ----- SECTION 6 ----- */
+.sec6-frame{
+    display: flex;
+    width: 71.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-shrink: 0;
+}
+.sec6-text{
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sec6-text h3{
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem; /* 120% */
+    letter-spacing: -0.05rem;
+    background: linear-gradient(90deg, #FF0000, #8F00FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    text-align: center;
+}
+.sec6-img{
+    width: 60rem;
+    height: 20rem;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.sec6-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -114,11 +114,21 @@
 button{
   -webkit-appearance: none;
   border: 0px;
-  border-radius: 20px;
+  border-radius: 50px;
   padding: 12px 25px;
   cursor: pointer;
   background: var(--color-bg3);
   color: var(--color-text2);
+  line-height: initial;
+  font-size: 14px;
+}
+button:disabled {
+  background-color: var(--color5); /* Couleur grisée pour indiquer l'inactivité */
+  color: var(--color-text3); /* Texte grisé */
+  cursor: not-allowed; /* Changement du curseur pour indiquer l'inactivité */
+  border: 1px solid #ccc; /* Bordure atténuée */
+  opacity: 0.6; /* Transparence pour accentuer l'effet désactivé */
+  pointer-events: none; /* Désactive tout type d'interaction */
 }
 
 #theme-toggle {

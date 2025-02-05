@@ -16,6 +16,7 @@ section {
     justify-content:center;
     align-items: center;
     padding: 4.75rem 8%;
+    flex-direction: column;
 }
 
 #sec-2 h2{
@@ -55,4 +56,7 @@ section {
 
 a{
 	color: var(--orange);
+}
+.liste-doc{
+    width: 100%;
 }

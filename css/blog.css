@@ -179,3 +179,20 @@ a:hover h4,a:hover p{
     font-weight: 400;
     line-height: 1.5rem; /* 150% */
 }
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    background: var(--orange);
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: var(--color-text2);
+}
+a:hover .tag {
+    background: var(--color-bg1);
+    color: var(--orange);
+}

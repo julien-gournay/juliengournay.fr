@@ -97,13 +97,15 @@ body{
   /*box-shadow: 0 -100vh 0 100vh var(--orange);*/ /* background all bar */
 }
 
+
 /* ----- TEXTE SELECTIONNE ----- */
-a p::selection,a h2::selection,a h3::selection{
+a::selection,a p::selection,a h2::selection,a h3::selection{
   background-color : blue;
   color : #fff
 }
 ::selection{
   background-color : var(--orange);
+  -webkit-text-fill-color: white; /* Force le texte en blanc lors de la sélection */
   color : #fff
 }
 
@@ -115,7 +117,7 @@ a p::selection,a h2::selection,a h3::selection{
 footer{
   display: block;
   /*padding: 4rem 9.375rem;*/
-  padding: 5%;
+  padding: 3% 6%;
   justify-content: center;
   align-items: center;
 }
@@ -157,7 +159,12 @@ footer{
   width: 8rem;
   gap: 1rem;
 }
-footer h4, footer p{
+footer h4{
+  color: var(--orange);
+  width: fit-content;
+  font-weight: 600;
+}
+footer p{
   color: var(--color-text1);
   width: fit-content;
 }
@@ -185,7 +192,7 @@ footer a:hover{
   align-items: center;
   /*gap: 23rem;*/
   flex-shrink: 0;
-  margin-top: 2.75rem;
+  margin-top: 1.75rem;
   justify-content: space-between;
 }
 .footer-plus p{
@@ -234,22 +241,37 @@ footer a:hover{
 }
 
 
+
+
 .popup{
   position: absolute;
   padding: 1rem 2rem;
   display: flex;
+  height: 3.8rem;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   flex-wrap: wrap;
   top: 6rem;
-  background-color: var(--orange);
   border-radius: 30px;
   color: white;
   margin: 0 2rem;
+  gap: 0.5rem;
 }
 .popup a{
   text-decoration: underline;
   cursor: pointer;
   color: var(--blanc);
+}
+.popup.p-inf{
+  background-color: green;
+}
+.popup.p-upd{
+  background-color: blue;
+}
+.popup.p-mai{
+  background-color: var(--violet);
+}
+.popup.p-pro{
+  background-color: red;
 }

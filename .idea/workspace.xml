@@ -4,146 +4,77 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4fc4d0c-c9e8-4090-97c1-c373a59325bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.htpasswd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/Lettre_de_motivation_Stage_SIO2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/certification/CNIL1-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/certification/CNIL2-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/certification/CNIL3-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/certification/CNIL4-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/certification/CNIL5-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/cv_general.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/cv_informatique.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/cv_job.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/cv_julien.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/rapport/rapport_glpi.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/stage/certificat_stage_nordcompo.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/stage/rapport_stage_laredoute.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/stage/rapport_stage_nordcompo.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/stage/rapport_stage_promod.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/tableau_synthese_slam.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/footer2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/2023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Lycee-Gaston-Berger.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/attention.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/bas.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/bg_jg_2k.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/bg_jg_4k.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/centre_documentation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/colbert2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/colbert3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/colbert4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/colbert5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/coverbg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/demande.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/discution.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/dutexdor_min.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/education/colbert.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/education/gastonberger.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/error-circle-fail-failure-disallowed-x-cross-bad-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/error-outline-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/error_404.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/dalkia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/dalkia2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/dalkia_min.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/ilevia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/kyecolo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/laredoute.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/laredoute2.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/nordcompo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/promod.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/recypotes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/experience/villeTourcoing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/forbidden-cancel-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/gastonberger2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/gastonberger3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/gemini.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/gustaveeiffel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/haut.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ia2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/identite/logoname.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/identite/logoname2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/julien.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/lock-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/dalkia.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/dalkia1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/dribbble_min.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/dutexdor.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/dutexdor2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/github_min.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/ilevia.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/instagram_min.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/laredoute.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/nordcompo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/nordcompo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/paris2024.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/recypotes.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo/ville_tourcoing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logoName.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logoName_s.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo_2023.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/lycée_gustave.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/maintenance-documents-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/metro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/moon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/nordcompo_min.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/page-not-found-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/photo_profil.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/adziwo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/arcai.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/chartegraphique_julien.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/chartegraphique_samuel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/cover-villetg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/design_GestionnaireServeur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/dscoiffure.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/ilevia_refonte.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/ilevia_refonte2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/kyecolo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/none.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/portfolio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/portfolio_Morgane.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/projet_NordCompo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/projet_marieteam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/projet_qualiteAir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/recypotes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/siteperso.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/siteweb_Filmotech.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/siteweb_IlevaHistoire.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/siteweb_LandingPage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/siteweb_LeGrandBerger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/portfolio/siteweb_Password.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/power-off-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/promod2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/recherche_alternance_2025.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/recherche_stage_2024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/recherche_stage_2025.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/recypotes_min.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/server-cancel-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/sssquiggly.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/sun.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/time-sand-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/wifi-exclamation-svgrepo-com.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navbar2.php" afterDir="false" />
+    <list default="true" id="d4fc4d0c-c9e8-4090-97c1-c373a59325bf" name="Changes" comment="v1.1.1">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/juliengournay.fr.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/setting.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/experience(old).css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/experience(old).php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/seting.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article.php" beforeDir="false" afterPath="$PROJECT_DIR$/article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/btssio.php" beforeDir="false" afterPath="$PROJECT_DIR$/btssio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confidentialite.php" beforeDir="false" afterPath="$PROJECT_DIR$/confidentialite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirm-mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm-mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit.php" beforeDir="false" afterPath="$PROJECT_DIR$/credit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/404.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/article.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/article.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/btssio.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/btssio.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/composent.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/composent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/confidentialite.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/confidentialite.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/confirm-mail.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/confirm-mail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/cursor.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cursor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/cv.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cv.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/defaut.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/defaut.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/document.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/document.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/education.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/education.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/experience.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/experience.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/icons.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/link.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/privacy.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/setting.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/infoalerte.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/infoalerte.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/maintenance.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/maintenance.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/morphing-navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/morphing-navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plandusite.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/plandusite.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/portfolio.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/portfolio.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stage.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/typography.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/typography.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/veille-techno.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/veille-techno.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv.html" beforeDir="false" afterPath="$PROJECT_DIR$/cv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/document.php" beforeDir="false" afterPath="$PROJECT_DIR$/document.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/education.php" beforeDir="false" afterPath="$PROJECT_DIR$/education.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experience.php" beforeDir="false" afterPath="$PROJECT_DIR$/experience.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/head.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/analystic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/privacy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage-2024.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage-dalkia.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage-ilevia.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage-laredoute.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stage-promod.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/mode_sombre.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mode_sombre.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/portfolio.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/portfolio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance.html" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance.php" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/alertes.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/alertes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/deconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/deconnexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/mail2.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/mail2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio2.php" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/veille-technologique.php" beforeDir="false" afterPath="$PROJECT_DIR$/veille-technologique.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +86,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -163,6 +94,30 @@
   }
 }]]></component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="v1.1.1">
+      <option name="closed" value="true" />
+      <created>1742065833296</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742065833296</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v1.1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1.1" />
   </component>
 </project>

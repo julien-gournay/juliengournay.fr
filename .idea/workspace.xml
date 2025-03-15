@@ -4,78 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4fc4d0c-c9e8-4090-97c1-c373a59325bf" name="Changes" comment="v1.1.1">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/juliengournay.fr.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/setting.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/experience(old).css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/experience(old).php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/seting.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article.php" beforeDir="false" afterPath="$PROJECT_DIR$/article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/btssio.php" beforeDir="false" afterPath="$PROJECT_DIR$/btssio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confidentialite.php" beforeDir="false" afterPath="$PROJECT_DIR$/confidentialite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirm-mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm-mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credit.php" beforeDir="false" afterPath="$PROJECT_DIR$/credit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/404.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/404.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/article.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/article.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/btssio.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/btssio.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/composent.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/composent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/confidentialite.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/confidentialite.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/confirm-mail.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/confirm-mail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/cursor.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cursor.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/cv.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cv.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/defaut.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/defaut.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/document.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/document.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/education.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/education.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/experience.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/experience.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/icons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/infoalerte.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/infoalerte.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/maintenance.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/maintenance.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/morphing-navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/morphing-navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/plandusite.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/plandusite.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/portfolio.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/portfolio.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stage.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/typography.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/typography.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/veille-techno.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/veille-techno.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv.html" beforeDir="false" afterPath="$PROJECT_DIR$/cv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/document.php" beforeDir="false" afterPath="$PROJECT_DIR$/document.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/education.php" beforeDir="false" afterPath="$PROJECT_DIR$/education.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experience.php" beforeDir="false" afterPath="$PROJECT_DIR$/experience.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/head.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mode_sombre.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mode_sombre.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/portfolio.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/portfolio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance.html" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance.php" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/alertes.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/alertes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/deconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/deconnexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/mail2.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/mail2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio2.php" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/veille-technologique.php" beforeDir="false" afterPath="$PROJECT_DIR$/veille-technologique.php" afterDir="false" />
-    </list>
+    <list default="true" id="d4fc4d0c-c9e8-4090-97c1-c373a59325bf" name="Changes" comment="v1.1.1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +15,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -117,6 +46,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update workspace.xml" />
     <MESSAGE value="v1.1.1" />
     <option name="LAST_COMMIT_MESSAGE" value="v1.1.1" />
   </component>

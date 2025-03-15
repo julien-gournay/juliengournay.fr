@@ -1,0 +1,269 @@
+/* ----- Configuration sections page ----- */
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+#sec-1{
+    background-color: var(--color-bg2);
+    background-size: cover;
+    color: var(--color-text1);
+    justify-content:center;
+    align-items: center;
+}
+#sec-2{
+    color: var(--color-text1);
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+
+#sec-1 h1 {
+	position: flex;
+    text-align: center;
+	background: linear-gradient(90deg, #FF0000, #8F00FF);
+    /*background: linear-gradient(90deg, #FFFFFF, #666666);*/
+	background-size: 400%;
+    font-weight: 1500;
+    font-size: 15vw;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: animate 5s linear infinite alternate;
+}
+@keyframes animate {
+	0% {
+		background-position: 0%;
+	}
+
+	100% {
+		background-position: 100%;
+	}
+}
+
+
+.nav-portfolio{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;    
+    flex-wrap: wrap;
+    position: sticky;
+    top: 20px;
+    z-index: 2;
+    background-color: #66666638;
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+button{
+    -webkit-appearance: none;
+    border: 0px;
+    border-radius: 20px;
+    padding: 12px 25px;
+    cursor: pointer;
+    background: var(--color-bg3);
+    color: var(--color-text2);
+}
+button.active{
+    background: linear-gradient(90deg, #FF0000, #8F00FF);
+    color: var(--color-text2);
+    font-weight: 700;
+}
+
+.tab-content{
+    display: none;
+}
+.tab-content .title-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+}
+.grid-card{
+    display: flex;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 8vw;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+}
+p{
+    color: var(--gris);
+}
+.card{
+    width: 18rem;
+    height: 20rem;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 0px solid var(--orange);
+    position: relative;
+    background-color: var(--color-bg2);
+    padding: 0.5rem;
+}
+.card-information{
+    width: auto;
+    height: 80%;
+    border-radius: 15px 15px 0 0;
+    padding: 1rem;
+}
+
+.card-information.c-act, .card-description.c-act{
+    background-color: #d1ffb7;
+}
+.card-information.c-sta, .card-description.c-sta{
+    background-color: #ffe2b8;
+}
+.card-information.c-job, .card-description.c-job{
+    background-color: #ffb7e5;
+}
+.card-information.c-ent, .card-description.c-ent{
+    background-color: #d4acf2;
+}
+.card-information.c-sal, .card-description.c-sal{
+    background-color: #c7baff;
+}
+.card-information.c-mis, .card-description.c-mis{
+    background-color: #ffbfbf;
+}
+
+.card-info-sup{
+    display: flex;
+    height: 20%;
+    justify-content: space-between;
+}
+.card-info-titre{
+    height: 80%;
+}
+.card-info-titre p{
+    font-size: xx-large;
+}
+.card-entreprise{
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+.card-entreprise-logo{
+    width: 30%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.card-entreprise-sup{
+    height: 100%;
+    width: 70%;
+}
+.card-entreprise-sup p{
+    color: var(--color-text1);
+}
+.card-entreprise-logo img{
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+.card-description{
+    width: auto;
+    height: 80%;
+    background-color: #ffeaba;
+    border-radius: 15px 15px 0 0;
+    padding: 1rem;
+    visibility: hidden;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card:hover .card-description{
+    display: flex;
+    visibility: visible;
+    cursor: pointer;
+}
+.card:hover .card-information{
+    display: none;
+    visibility: hidden;
+}
+.card-description-img{
+    height: 40%;
+}
+.card-description img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+
+
+
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }

@@ -1,0 +1,92 @@
+.body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+}
+
+#logoName {
+    /*margin-top: 8%;*/
+    margin-bottom: 2rem;
+    width: 12vw;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 10vw;
+
+    /* Fallback: Set a background color. */
+    background-color: black;
+    
+    /* Create the gradient. */
+    background-image: linear-gradient(90deg, #FF0000, #8F00FF);
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+h2{
+    margin: 0;
+    padding-top: 0.1em;
+    width: 100%;
+    color: white;
+    font-size: 5vw;
+    font-weight: lighter;
+}
+
+p {
+    /* Caractéristique paragraphe */
+    font-size: 2vw;
+    color: white;
+    margin-top: 1rem;
+
+}
+
+.div-button {
+    margin-top: 2rem;
+}
+
+.button1, .button2, .button3, .button4, .button5{
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 0.5em;
+    width: 15em;
+    height: 2.5em;
+
+    border-radius: 20px;
+    color: white;
+    font-size: 1rem;
+}
+
+.button1{
+    background: linear-gradient(90deg, #FF0000, #8F00FF);
+    border-color: black;
+}
+
+.button2, .button3, .button4, .button5{
+    background: transparent;
+    border-color: white;
+}
+
+.button1:hover{
+    /* Effet survol boutons */
+    background: white;
+    border-color: black;
+    cursor: pointer;
+    color: black;
+    /*font-weight: bold;*/
+} 
+
+.button2:hover, .button3:hover, .button4:hover, .button5:hover{
+    /* Effet survol boutons */
+    background : white;
+    border-color: white;
+    cursor: pointer;
+    color: black;
+}

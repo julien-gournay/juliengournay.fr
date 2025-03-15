@@ -1,0 +1,53 @@
+:root{
+    --gris: #0E0E0E;
+    --rouge: #FF0000;
+    --violet: #8f008f;
+    --orange: #ff4c29;
+    --d: linear-gradient(90deg, #FF0000, #8F00FF);
+    
+    --color-bg1: #ffffff;
+    --color-bg2: #f4f4f4;
+    --color-bg3: #0E0E0E;
+    --color-bg4: #ff9681;
+    --color-bg5: #81ddff;
+    --color-text1: #0E0E0E;
+    --color-text2: #ffffff;
+    --color-text3: #666666;
+    --color-text4: #ff4c29;
+    --color-text5: #299fff;
+    --color1: #000000;
+    --color2: #0E0E0E;
+    --color3: #252525;
+    --color4: #666666;
+    --color5: #B3B3B3;
+    --color6: #F4F4F4;
+    --color7: #FFFFFF;
+}
+
+.dark-theme{ /* Couleur lors du theme sombre */
+    --color-bg1: #0E0E0E;
+    --color-bg2: #000000;
+    --color-bg3: #ffffff;
+    --color-bg4: #ff4c29;
+    --color-bg5: #299fff;
+    --color-text1:#edf2fc;
+    --color-text2: #000000;
+    --color-text3: #a9a9a9;
+    --color-text4: #ff9681;
+    --color-text5: #81ddff;
+
+    --color1: #FFFFFF;
+    --color2: #F4F4F4;
+    --color3: #B3B3B3;
+    --color4: #666666;
+    --color5: #0E0E0E;
+    --color6: #252525;
+    --color7: #000000;
+}
+
+
+
+.dark-themeUser{ /* Couleur lors du theme user */
+    --color-bg1: #0E0E0E;
+
+}

@@ -1,0 +1,30 @@
+#AuthUserFile "C:\wamp64\www\dev.juliengournay.fr\.htpasswd"
+#AuthName Identifiez-vous
+#AuthType Basic
+#require valid-user
+
+<IfModule mod_headers.c>
+    #Header set Content-Security-Policy "script-src 'self' "
+	#Header set Content-Security-Policy "script-src 'self' https://www.googletagmanager.com;"
+</IfModule> 
+
+
+ErrorDocument 404 /error_docs/not_found.html
+#AddType text/css .css
+
+# SUPPRESION EXTENSION
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+# PAGE DE MAINTENANCE
+#RewriteEngine on
+#RewriteCond %{REQUEST_URI} !/maintenance.html$
+#RewriteCond %{REQUEST_URI} !/maintenance.css$
+#RewriteCond %{REQUEST_URI} !/img/maintenance-documents-svgrepo-com.svg$
+#RewriteCond %{REQUEST_URI} !/img/logoName.png$
+#RewriteCond %{REMOTE_ADDR} !^88\.123\.63\.69
+#RewriteRule $ /maintenance.html [R=302,L]

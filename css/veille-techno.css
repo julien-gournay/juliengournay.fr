@@ -1,0 +1,242 @@
+/* ----- Propriété du site -----*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Product Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--color-bg1);
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--color-bg3);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+    /*box-shadow: 0 -100vh 0 100vh var(--orange);*/
+}
+
+/* ----- Configuration sections page ----- */
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+#sec-1{
+    background-color: var(--color-bg2);
+    background-size: cover;
+    color: var(--color-text1);
+    justify-content:center;
+    align-items: center;
+}
+#sec-2 {
+    color: var(--color-text1);
+    background-color: var(--color-bg1);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+#sec-3{
+    color: var(--color-text1);
+    background-color: var(--color-bg4);
+    justify-content:center;
+    align-items: center;
+    min-height: 30vh;
+    display: flex;
+}
+#sec-4{
+    color: var(--color-text1);
+    background-color: var(--color-bg2);
+    justify-content:center;
+    align-items: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 4.75rem 8%;
+}
+
+
+#sec-1 h1 {
+	display: flex;
+    text-align: center;
+	background: linear-gradient(90deg, #FF0000, #8F00FF);
+    /*background: linear-gradient(90deg, #FFFFFF, #666666);*/
+	background-size: 400%;
+    /*font-weight: 1500;*/
+    font-weight: revert;
+    line-height: 1;
+    font-size: 15vw;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: animate 5s linear infinite alternate;
+}
+@keyframes animate {
+	0% {
+		background-position: 0%;
+	}
+
+	100% {
+		background-position: 100%;
+	}
+}
+
+.sujet{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+.cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    flex-shrink: 0;
+    z-index: 0;
+    left: 0;
+}
+.card-info{
+    position: relative;
+    z-index: 1;
+    max-width: 70rem;
+    border-radius: 1.875rem;
+    background: rgba(var(--color-bg3), 0.5);
+    padding: 2.5rem 3rem; /*padding au tour du texte*/
+    backdrop-filter: blur(10px);
+}
+.card-info-ctn{
+    display: flex;
+    flex-direction: column;
+}
+.card-info h2{
+    width: auto;
+    flex-shrink: 0;
+    color: var(--color-text1);
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.5rem; /* 95.238% */
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.card-info p{
+    flex-shrink: 0;
+    color: var(--color-text1);
+    text-align: justify;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5rem; /* 133.333% */
+}
+
+#sec3-div1{
+    text-align: center;
+    padding: 2.5rem 5rem; /*padding au tour du texte*/
+}
+h2{
+    width: auto;
+    flex-shrink: 0;
+    color: var(--color-text1);
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.5rem; /* 95.238% */
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+p{
+    flex-shrink: 0;
+    color: var(--color-text1);
+    text-align: justify;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5rem; /* 133.333% */
+}
+
+#sec4-div1{
+    display: flex;
+    
+}
+#imgAttention{
+    width: 100%;
+    height: 5rem;
+    padding-right: 2rem;
+}
+
+
+
+#cadre{
+    margin-bottom:2rem;
+    padding:1.5rem;
+    background-color: var(--color-bg1);
+}
+h3:hover{
+    color: var(--orange);
+	cursor:pointer;
+}
+.list_card{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.card{
+    height: fit-content;
+}
+.card-date{
+    color: var(--color-text1);
+    font-size: smaller;
+}
+
+/* Conteneur global */
+.infinite-scroll-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Cache ce qui dépasse */
+    color: var(--color-text1); /* Texte blanc */
+    font-size: 1.5rem;
+    height: 3rem; /* Hauteur du conteneur */
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+
+/* Texte défilant */
+.scrolling-text {
+    display: flex;
+    animation: scroll-text 40s linear infinite;
+}
+
+/* Contenu du texte (chaque bloc) */
+.scrolling-text span {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 0; /* Pas d'espace entre les blocs */
+}
+
+/* Animation CSS */
+@keyframes scroll-text {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

@@ -129,7 +129,7 @@
         <div class="sec5-frame">
             <div class="sec5-text">
                 <h3>Ma veille Technologique</h3>
-                <h4>"L'accésibilité de L'IA au grand public"</h4>
+                <h4>"L’utilisation des assistants vocaux peut-il révolutionner notre quotidien ?"</h4>
                 <div>
                     <button onclick="location.href='veille-technologique.php'" class="button_cv">Voir toute ma veille</button>
                 </div>
@@ -145,11 +145,11 @@
             <div class="sec6-text">
                 <h3>Centre de documentation pour les cours</h3>
                 <div>
-                    <button onclick="location.href='veille-technologique.php'" class="button_cv">Accéder à l'espace</button>
+                    <button onclick="location.href='https://documentation.juliengournay.fr'" class="button_cv">Accéder à l'espace</button>
                 </div>
             </div>
             <div class="sec6-img">
-                <img src="img/2023.png" alt="">
+                <img src="img/centre_documentation.png" alt="">
             </div>
         </div>
     </section>

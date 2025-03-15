@@ -119,7 +119,7 @@
                     <img id="logosvg2" class="logosvg" src="img/logo/dalkia.svg" alt="">
                 </div>
                 <div class="logo_box">
-                    <img id="logosvg3" class="logosvg" src="img/logo/laredoute.svg" alt="">
+                    <img id="logosvg3" class="logosvg" src="img/logo/ville_tourcoing.jpg" alt="">
                 </div>
                 <div class="logo_box">
                     <img id="logosvg4" class="logosvg" src="img/logo/dutexdor.svg" alt="">

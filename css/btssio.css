@@ -388,7 +388,7 @@ figure:hover+span {
 .sec6-frame{
     display: flex;
     width: 71.25rem;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: flex-start;
     gap: 3rem;
     flex-shrink: 0;
@@ -399,8 +399,8 @@ figure:hover+span {
     flex-direction: column;
     gap: 2.5rem;
     align-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .sec6-text h3{
     font-size: 2.5rem;
@@ -413,7 +413,6 @@ figure:hover+span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: flex;
-    text-align: center;
 }
 .sec6-img{
     width: 60rem;

@@ -100,7 +100,7 @@
                         <h4>Ville de Tourcoing</h4>
                         <p class="sec3-boite-date">24 février au 04 avril 2025 </p>
                     </div>
-                    <p class="des_p">En février, je vais effectuer un stage de six semaines dans les locaux de la Mairie de Tourcoing. Ce stage sera une nouvelle occasion d’apprendre de nouvelles méthodes de développement et de valider mon BTS.</p>
+                    <p class="des_p">En février, j'ai effectué un stage de six semaines dans les locaux de la Mairie de Tourcoing. Ce stage fut une nouvelle occasion d’apprendre de nouvelles méthodes de développement et de valider mon BTS.</p>
                     <div class="sec3-boite-bt">
                         <button onclick="location.href='files/stage/convention_stage_mtourcoing'" class="button_cv">Convention de stage</button>
                         <button onclick="location.href='#'" class="button_cv" disabled>Certificat de stage (indisponible)</button>

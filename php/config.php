@@ -1,4 +1,9 @@
 <?php
+    require_once __DIR__ . '/../vendor/autoload.php';
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+    $dotenv->load();
+
     // Informations de connexion à votre base de données
     $servername = "localhost";
     $username = "root";

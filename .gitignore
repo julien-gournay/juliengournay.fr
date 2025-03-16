@@ -1,0 +1,9 @@
+# Environnement & Config
+.env
+DB
+
+# Dépendances
+vendor
+
+# IDE & OS
+.idea

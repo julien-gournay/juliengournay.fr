@@ -597,3 +597,9 @@ h3{
 a {
   text-decoration: none;
 }
+
+@media screen and (max-width: 950px) {
+  .dynamic-txts2{
+      height: 200%;
+  }
+}

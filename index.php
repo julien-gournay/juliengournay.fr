@@ -27,20 +27,35 @@
 
     <!-- SECTION 1 : EN TETE -->
     <section id="sec-1">
+        <div class="container">
+            <div class="blob"></div>
+        </div>
         <?php include 'php/alertes.php'; ?>
-        
-        <div class="wrapper">
+
+        <!--<div class="wrapper">
             <div class="static-txt">Je suis étudiant</div>
-            <ul class="dynamic-txts">
+            <div class="static-txt" style="text-transform: uppercase; font-weight: bolder">Développeur</div>-->
+            <!--<ul class="dynamic-txts">
                 <li><span>Technicien</span></li>
                 <li><span>Développeur</span></li>
                 <li><span>Designer</span></li>
                 <li><span>Vidéaste</span></li>
             </ul>
+        </div>-->
+        <div class="text-changer">
+            <p class="intro-text">Je suis</p>
+            <div class="dynamic-txts2">
+                <span class="dt2-s">Julien Gournay</span>
+                <span class="dt2-s">étudiant Developpeur</span>
+                <span class="dt2-s">technicien informatique</span>
+                <span class="dt2-s">maquetteur web</span>
+                <span class="dt2-s">Julien Gournay</span>
+            </div>
         </div>
 
+
         <a href="#sec-2"> <!-- bouton scrool -->
-            <div class="scroll-down"></div>   
+            <div class="scroll-down"></div>
         </a>
     </section>
 
@@ -63,7 +78,7 @@
             <div class="sec5-text">
                 <div class="sec5-text-titre">
                     <p class="cat_p lien">Expériences </p>
-                    <h3>Des stages d’observations aux job d’été ...</h3>
+                    <h3>Des nombreuses semaines d'experiences en stage</h3>
                 </div>
                 <div class="sec5-text-info">
                     <div class="sec5-text-info-des">
@@ -76,12 +91,21 @@
                 </div>
             </div>
             <div class="sec5-box">
+                <a href="article.php?url=stage-villetourcoing"><div class="sec5-boite">
+                        <div class="box-icon">
+                            <img src="img/nordcompo_min.png" alt="">
+                        </div>
+                        <div class="box-text">
+                            <h4 class="">Stage de BTS SIO<br>VILLE TOURCOING</h4>
+                            <p class="">J'ai pu effectuer un stage de première année de bts au sein du service informatique chez Nord Compo.</p>
+                        </div>
+                    </div></a>
                 <a href="article.php?url=stage-nordcompo"><div class="sec5-boite">
                     <div class="box-icon">
                         <img src="img/nordcompo_min.png" alt="">
                     </div>
                     <div class="box-text">
-                        <h4 class="">Stage de BTS<br>NORD COMPO</h4>
+                        <h4 class="">Stage de BTS SIO<br>NORD COMPO</h4>
                         <p class="">J'ai pu effectuer un stage de première année de bts au sein du service informatique chez Nord Compo.</p>
                     </div>
                 </div></a>
@@ -90,17 +114,8 @@
                         <img src="img/experience/dalkia_min.png" alt="">
                     </div>
                     <div class="box-text">
-                        <h4 class="">Stage de BTS<br>DALKIA</h4>
+                        <h4 class="">Stage de BTS SNIR<br>DALKIA</h4>
                         <p class="">J'ai pu effectuer un stage de première année de bts au sein des bureaux de Dalkia au service informatique.</p>
-                    </div>
-                </div></a>
-                <a href="article.php?url=job-dutexdor"><div class="sec5-boite">
-                    <div class="box-icon">
-                        <img src="img/dutexdor_min.png" alt="">
-                    </div>
-                    <div class="box-text">
-                        <h4 class="">Job d’été DUTEXDOR</h4>
-                        <p class="">Pendant les vacances d'étés entre 2022 et 2024, j’ai eu l'occasion de travailler dans un entrepôt de textile.</p>
                     </div>
                 </div></a>
             </div>

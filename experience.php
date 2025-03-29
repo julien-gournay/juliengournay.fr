@@ -118,6 +118,7 @@
                 ?>
             </div>
         </div>
+
         <div class="tab-content" id="certif-card">
             <h2 class="title-section">Mes certifications et diplômes</h2>
             <div class="certif-sec">
@@ -163,10 +164,14 @@
                         }
                     ?>
                 </div>
+
+                <h2 class="title-section">Mon parcours de certification</h2>
                 <div class="certifC-cadre">
-                    <h3 class="">Mon parcours de certification</h3>
+
                     <h4 class="">Epreuve BTS SIO EF3</h4>
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/deck/WGptB7BA3BIiCePmhwZrYl/Certification-Figma?node-id=5-325&viewport=-1259%2C-98%2C0.53&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+                    <div class="certifC-cadre-figma">
+                        <iframe class="certifC-cadre-figma-iframe" style="border: 1px solid rgba(0, 0, 0, 0.1);"  height="450" src="https://embed.figma.com/deck/WGptB7BA3BIiCePmhwZrYl/Certification-Figma?node-id=5-325&viewport=-1259%2C-98%2C0.53&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>

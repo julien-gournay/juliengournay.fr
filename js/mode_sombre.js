@@ -20,6 +20,7 @@ icon.onclick = function() {
     localStorage.setItem('themeMode', isDarkMode ? 'dark' : 'light');
     updateTheme();
 };
+
 function updateTheme() {
     icon.src = isDarkMode ? "img/sun.png" : "img/moon.png";
     logo.src = isDarkMode ? "img/logoName.png" : "img/logoName_s.png";
@@ -32,3 +33,7 @@ function updateTheme() {
     //document.getElementById("logosvg7").style.filter = isDarkMode ? "invert(99%) sepia(72%) saturate(0%) hue-rotate(317deg) brightness(108%) contrast(101%)" : "invert(99%) sepia(72%) saturate(0%) hue-rotate(317deg) brightness(108%) contrast(101%)";
     //document.getElementById("footer-icon3").style.filter =isDarkMode ? "" : "invert(0%) sepia(93%) saturate(0%) hue-rotate(21deg) brightness(100%) contrast(103%)";
 }
+
+
+
+

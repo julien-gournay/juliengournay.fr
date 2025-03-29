@@ -21,8 +21,8 @@ section {
 
 #sec-2 h2{
     background: linear-gradient(90deg, #FF0000, #8F00FF);
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     text-align: center;
     font-size: 2.5rem;
     font-style: normal;
@@ -33,33 +33,24 @@ section {
 }
 
 #sec-1 h1 {
-	position: flex;
+    position: flex;
     text-align: center;
-	background: linear-gradient(90deg, #FF0000, #8F00FF);
+    background: linear-gradient(90deg, #FF0000, #8F00FF);
     /*background: linear-gradient(90deg, #FFFFFF, #666666);*/
-	background-size: 400%;
+    background-size: 400%;
     font-weight: 1500;
     font-size: 15vw;
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-	animation: animate 5s linear infinite alternate;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 5s linear infinite alternate;
 }
 @keyframes animate {
-	0% {
-		background-position: 0%;
-	}
+    0% {
+        background-position: 0%;
+    }
 
-	100% {
-		background-position: 100%;
-	}
+    100% {
+        background-position: 100%;
+    }
 }
 
-a{
-	color: var(--orange);
-}
-.liste-doc{
-    width: 100%;
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-}

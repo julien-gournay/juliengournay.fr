@@ -5,10 +5,10 @@
     $dotenv->load();
 
     // Informations de connexion à votre base de données
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "juliengrn";
+    $servername = $_ENV['DB_HOST'];
+    $username = $_ENV['DB_USER'];
+    $password = $_ENV['DB_PASS'];
+    $dbname = $_ENV['DB_NAME'];
 
     // Créer la connexion
     $conn = new mysqli($servername, $username, $password, $dbname);

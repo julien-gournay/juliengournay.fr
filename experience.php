@@ -139,7 +139,7 @@
                             $urlDiplome = $tab[5];
                             $idDocument = $tab[6];
                             $imgOrg = $tab[7];
-                            $imgDip = $tab[8];
+                            //$imgDip = $tab[8];
                             $nb++;
 
                             $formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::NONE, IntlDateFormatter::NONE, NULL, NULL, 'MMMM yyyy');
@@ -176,34 +176,51 @@
             </div>
         </div>
 
-        <div class="tab-content" id="video-card">
-            <h2 class="title-section">Mes compétences</h2>
-            <div class="grid-card">
+        <div class="tab-content" id="competence-card">
+            <div class="header-cardCompetence">
+                <h2 class="title-section">Mes compétences</h2>
+                <button onclick="location.href='files/tableau_synthese_slam.xlsx'" class="button_cv">Télécharger mon tableau des compétences</button>
+            </div>
+            <div class="grid-cardCompetence">
                 <?php
                     if($mabase){
-                        $req = "SELECT * FROM portfolio WHERE affichage=\"oui\" AND type=3";
-                        $res = mysqli_query($cnt,$req);
+                        $res4 = mysqli_query($cnt,"SELECT * FROM type_competence");
                         $nb=0;
                     }
 
-                    while ($tab = mysqli_fetch_row($res)) {
-                        $id = $tab[0];
-                        $titre = $tab[1];
-                        $soustitre = $tab[2];
-                        $description = $tab[3];
-                        $annee = $tab[4];
-                        $type = $tab[5];
-                        $image = $tab[6];
-                        $lien = $tab[7];
-                        $affichage = $tab[8];
+                    while ($tab = mysqli_fetch_row($res4)) {
+                        $idTC = $tab[0];
+                        $nomTC = $tab[1];
+                        $sousTitreTC = $tab[2];
+                        $descriptionTC = $tab[3];
                         $nb++;
 
-                        if(empty($image)){
-                            $image="https://dev.juliengournay.fr/img/portfolio/none.png";
+                        echo("<br><h3>$nomTC - $sousTitreTC</h3>
+                            <p>$descriptionTC</p>");
+                        if($mabase){
+                            $res5 = mysqli_query($cnt,"SELECT * FROM competence, lien_competence WHERE lien_competence.idCatComp = $idTC AND lien_competence.idComp=competence.idComp;");
+                            $nb=0;
+                        }
+                        while ($tab = mysqli_fetch_row($res5)) {
+                            $idComp = $tab[0];
+                            $nomComp = $tab[1];
+                            $catComp = $tab[2];
+                            $dateDebutComp = $tab[3];
+                            $dateFinComp = $tab[4];
+                            $etatComp = $tab[5];
+                            $projetComp = $tab[6];
+                            $urlComp = $tab[7];
+
+                            if($urlComp){
+                                echo("<a href='$urlComp'>👉 $nomComp (Documentation)</a>");
+                            }
+                            else{
+                                echo("<a href='projet.php?url=$projetComp'>👉 $nomComp ($projetComp)</a>");
+                            }
                         }
                     }
-                    if($nb ==0){
-                        echo("<div><h2>Aucune données n'est disponible actuellement !</h2></div>");
+                    if(empty($idTC)){
+                        echo("<div><h2>Aucune compétence n'est disponible actuellement !</h2></div>");
                     }
                 ?>
             </div>

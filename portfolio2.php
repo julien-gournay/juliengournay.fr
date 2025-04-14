@@ -73,12 +73,18 @@
                         $titre = $tab[1];
                         $soustitre = $tab[2];
                         $description = $tab[3];
-                        $annee = $tab[4];
-                        $type = $tab[5];
-                        $image = $tab[6];
-                        $lien = $tab[7];
-                        $affichage = $tab[8];
-                        $technologie = $tab[10];
+                        $anneeDebut = $tab[4];
+                        $anneFin = $tab[5];
+                        $type = $tab[6];
+                        $categorie = $tab[7];
+                        $image = $tab[8];
+                        $siteweb = $tab[9];
+                        $github = $tab[10];
+                        $statut = $tab[11];
+                        $affichage = $tab[12];
+                        $outils = $tab[13];
+                        $languages = $tab[14];
+                        $tags = $tab[15];
                         $nb++;
 
                         if(empty($image)){
@@ -86,31 +92,25 @@
                         }
 
                         // Si vous souhaitez afficher un tableau contenu dans une colonne (JSON ou CSV)
-                        if ($technologie) { // Supposons que $type contient un tableau JSON ou CSV
+                        if ($outils) { // Supposons que $type contient un tableau JSON ou CSV
                             $tableau = []; // Initialisation
 
                             // Vérifiez si c'est un JSON
-                            if ($decoded = json_decode($technologie, true)) {
+                            if ($decoded = json_decode($outils, true)) {
                                 $tableau = $decoded; // JSON décodé en tableau PHP
                             } else {
                                 // Sinon, considérez que c'est une chaîne CSV
-                                $tableau = explode(",", $technologie);
+                                $tableau = explode(",", $outils);
                             }
-
+                        }
                             echo("<div class=\"card\">");
-                            echo("<a href=\"$lien\"><img src=\"$image\" class=\"card-img\"></a>");
-                            echo("<a href=\"$lien\">");
+                            echo("<a href=\"projet.php?url=$id\"><img src=\"$image\" class=\"card-img\"></a>");
+                            echo("<a href=\"projet.php?url=$id\">");
                             echo("<div class=\"card-body\">");
                             echo("<h2 class=\"card-title\">$titre</h2>");
                             echo("<p class=\"card-sub-title\">$soustitre</p>");
-                            echo("<p class=\"card-info\">".substr($description, 0, 130)."</p>");
-                            echo "<p>";
-                            foreach ($tableau as $valeur) {
-                                echo(htmlspecialchars($valeur).", "); // Protégez les données avec htmlspecialchars
-                            }
-                            echo "</p>";
+                            echo("<p class=\"card-info\">".mb_substr($description, 0, 150)." ...</p>");
                             echo("</div></a></div>");
-                        }
                     }
                 ?>
             </div>
@@ -137,26 +137,32 @@
                             $titre = $tab[1];
                             $soustitre = $tab[2];
                             $description = $tab[3];
-                            $annee = $tab[4];
-                            $type = $tab[5];
-                            $image = $tab[6];
-                            $lien = $tab[7];
-                            $affichage = $tab[8];
+                            $anneeDebut = $tab[4];
+                            $anneFin = $tab[5];
+                            $type = $tab[6];
+                            $categorie = $tab[7];
+                            $image = $tab[8];
+                            $siteweb = $tab[9];
+                            $github = $tab[10];
+                            $statut = $tab[11];
+                            $affichage = $tab[12];
+                            $outils = $tab[13];
+                            $languages = $tab[14];
+                            $tags = $tab[15];
                             $nb++; 
 
                             if(empty($image)){
                                 $image="https://dev.juliengournay.fr/img/portfolio/none.png";
                             }
-    
+
                             echo("<div class=\"card\">");
-                            echo("<a href=\"\"><img src=\"$image\" class=\"card-img\"></a>");
-                            echo("<a href=\"\">");
+                            echo("<a href=\"projet.php?url=$id\"><img src=\"$image\" class=\"card-img\"></a>");
+                            echo("<a href=\"projet.php?url=$id\">");
                             echo("<div class=\"card-body\">");
                             echo("<h2 class=\"card-title\">$titre</h2>");
                             echo("<p class=\"card-sub-title\">$soustitre</p>");
-                            echo("<p class=\"card-info\">".substr($description, 0, 130)."</p>");
+                            echo("<p class=\"card-info\">".mb_substr($description, 0, 150)." ...</p>");
                             echo("</div></a></div>");
-
                         }
                         if($nb ==0){
                             echo("<div><h2>Aucune données n'est disponible actuellement !</h2></div>");

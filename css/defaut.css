@@ -331,6 +331,9 @@ footer a:hover{
   height: 1.5rem;
   filter: invert(0%) sepia(3%) saturate(39%) hue-rotate(329deg) brightness(102%) contrast(100%);
 }
+#theme-toggle{
+  background: none;
+}
 @media (max-width: 768px) { /* Ajuster la largeur en fonction de vos besoins */
 
 }

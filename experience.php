@@ -205,17 +205,42 @@
                             $idComp = $tab[0];
                             $nomComp = $tab[1];
                             $catComp = $tab[2];
-                            $dateDebutComp = $tab[3];
-                            $dateFinComp = $tab[4];
+                            $dateDebutComp = new DateTime($tab[3]);
+                            $dateFinComp = new DateTime($tab[4]);
                             $etatComp = $tab[5];
                             $projetComp = $tab[6];
                             $urlComp = $tab[7];
 
+                            // Formatter français
+                            $formatterFull = new IntlDateFormatter('fr_FR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+                            $formatterFull->setPattern('MMMM yyyy');
+
+                            $formatterMonth = new IntlDateFormatter('fr_FR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+                            $formatterMonth->setPattern('MMMM');
+
+                            // Comparaison logique
+                            if ($dateDebutComp->format('Y-m') === $dateFinComp->format('Y-m')) {
+                                // Même mois et année
+                                $date = $formatterFull->format($dateDebutComp);
+                            } elseif ($dateDebutComp->format('Y') === $dateFinComp->format('Y')) {
+                                // Même année mais mois différents
+                                $dateDebutStr = $formatterMonth->format($dateDebutComp);
+                                $dateFinStr = $formatterMonth->format($dateFinComp);
+                                $annee = $dateDebutComp->format('Y');
+                                $date = "$dateDebutStr - $dateFinStr $annee";
+                            } else {
+                                // Mois et années différentes
+                                $dateDebutStr = $formatterFull->format($dateDebutComp);
+                                $dateFinStr = $formatterFull->format($dateFinComp);
+                                $date = "$dateDebutStr - $dateFinStr";
+                            }
+
+
                             if($urlComp){
-                                echo("<a href='$urlComp'>👉 $nomComp (Documentation)</a>");
+                                echo("<a href='$urlComp' target='_blank'>👉 $nomComp [$date]</a>");
                             }
                             else{
-                                echo("<a href='projet.php?url=$projetComp'>👉 $nomComp ($projetComp)</a>");
+                                echo("<a href='projet.php?url=$projetComp' target='_blank'>👉 $nomComp [$date]</a>");
                             }
                         }
                     }

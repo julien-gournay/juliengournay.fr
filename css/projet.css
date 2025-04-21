@@ -52,7 +52,7 @@ h1 {
     flex-direction: column;
     gap: 1rem;
 }
-.aside-alert, .aside-alert-finish{
+.aside-alert, .aside-alert-finish, .aside-alert-break{
     background: rgb(254 240 138);
     border-radius: 1rem;
     width: 100%;
@@ -61,6 +61,9 @@ h1 {
 }
 .aside-alert-finish{
     background: #D4EDD9;
+}
+.aside-alert-break{
+    background: #edd4dc;
 }
 .aside-main{
     background: var(--color-bg2);

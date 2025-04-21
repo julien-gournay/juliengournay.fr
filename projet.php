@@ -29,7 +29,6 @@ if (isset($_GET["url"])) {
 }
 
 if ($mabase) {
-    $req = "";
     $res = mysqli_query($cnt, "SELECT * FROM portfolio WHERE portfolio.idPortfolio=$url");
 }
 ?>
@@ -106,47 +105,74 @@ if ($mabase) {
                 <p class="description"><?php echo("$description"); ?></p>
             </div>
 
-            <p class="idDocument"><a href="https://dev.juliengournay.fr/document.php?url=$idDocument" target="_blank"><?php echo("$idDocument"); ?></a></p>
+            <?php
+            if (!empty($github)) {
+                echo("<div><h2>Code source</h2>
+                            <p>Cet projet est disponible sur mon Github : <a href='$github'>$github</a></p>    
+                        </div>");
+            }
 
-        <?php
-        if (!empty($github)) {
-            echo("<div><h2>Code source</h2>
-                        <p>Cet projet est disponible sur mon Github : <a href='$github'>$github</a></p>    
+            // TYPE DE PROJET
+            if ($type == 2 && !empty($github)) {
+                echo("<div><h2>Maquette Figma</h2>
+                            test   
+                        </div>");
+            }
+
+            // PROJETS
+            if (!empty($idProject)) {
+                echo("<div><h2>Projet</h2>
+                            <p>Cet projet appartient à un grand projet : <a href=\"projet.php?url=$idProject\" target=\"_blank\">Voir le projet principal.</a></p>
                     </div>");
-        }
-        if ($type == 2 && !empty($github)) {
-            echo("<div><h2>Maquette Figma</h2>
-                        test   
-                    </div>");
-        }
-        if (!empty($idProject)) {
-            echo("<div><h2>Projet</h2>
-                        <p>Cet projet appartient à un grand projet : <a href=\"projet.php?url=$idProject\" target=\"_blank\">Voir le projet principal</a></p>
-    </div>");
-        }
-        ?>
+            }
+
+            // COMPETENCES
+            if($mabase){
+                $res_comp = mysqli_query($cnt,"SELECT type_competence.nom,type_competence.sousTitre,competence.nomComp FROM competence, lien_competence, type_competence WHERE lien_competence.idComp = competence.idComp AND lien_competence.idCatComp = type_competence.id AND competence.projet=22 ORDER BY type_competence.id;");
+                if (mysqli_fetch_row($res_comp)) {
+                    echo("<div><h2>Compétences</h2>
+                            <p>Pour ce projet, j'ai pu développer diverses compétences selon le tableau de synthèse de BTS SIO : </p>");
+                    while ($tab = mysqli_fetch_row($res_comp)) {
+                        $nomCatComp = $tab[0];
+                        $sousTitreComp = $tab[1];
+                        $nomComp = $tab[2];
+
+                        echo("<li><strong>$sousTitreComp ($nomCatComp)</strong> :<br>$nomComp,</li><br>");
+                    }
+                    echo("</div>");
+                }
+            }
+            ?>
         </article>
     </div>
 
     <div class="aside">
         <?php
-            if($statut == 2){
-                echo("<div class=\"aside-alert\">
-                    <h2>En développement</h2>
-                    <p>Actuellement, ce projet est en phase de développement car il y a d'autres fonctionnalités à ajouter.</p>
-                </div>");
-            }
-            if($statut == 1){
-                echo("<div class=\"aside-alert\">
-                        <h2>Prochainement</h2>
-                        <p>Actuellement, ce projet est en phase de reflexion et débutera bientôt.</p>
-                    </div>");
-            }
-            if($statut == 3){
-                echo("<div class=\"aside-alert-finish\">
+            switch ($statut) {
+                case 1:
+                    echo("<div class=\"aside-alert\">
+                            <h2>Prochainement</h2>
+                            <p>Actuellement, ce projet est en phase de reflexion et débutera bientôt.</p>
+                        </div>");
+                    break;
+                case 2:
+                    echo("<div class=\"aside-alert\">
+                            <h2>En développement</h2>
+                            <p>Actuellement, ce projet est en phase de développement car il y a d'autres fonctionnalités à ajouter.</p>
+                        </div>");
+                    break;
+                case 3:
+                    echo("<div class=\"aside-alert-finish\">
                             <h2>Terminé</h2>
                             <p>Actuellement, ce projet est fini. Il est possible que des mises à jours ai lieu dans le futur.</p>
                         </div>");
+                    break;
+                case 4:
+                    echo("<div class=\"aside-alert-break\">
+                            <h2>En pause</h2>
+                            <p>Actuellement, le développement de ce projet est en pause, il est possible qu'il soit abandonné à l'avenir.</p>
+                        </div>");
+                    break;
             }
         ?>
 
@@ -208,6 +234,20 @@ if ($mabase) {
             <div class="aside-main-bt">
                 <button onclick="location.href='<?php echo("$siteweb"); ?>'">Voir le projet</button>
             </div>
+
+            <?php if($idDocument){
+                if ($mabase) {
+                    $res2 = mysqli_query($cnt, "SELECT lien FROM document WHERE document.idDoc=$idDocument");
+                }
+                $tab = mysqli_fetch_row($res2);
+                if ($tab) {
+                    $lienDoc = $tab[0];
+
+                    echo("<div class=\"aside-main-bt\">
+                        <button onclick=\"location.href='$lienDoc'\">Voir le document</button>
+                    </div>");
+                }
+            } ?>
         </div>
     </div>
 </section>

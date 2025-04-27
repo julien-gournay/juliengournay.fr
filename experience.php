@@ -206,7 +206,7 @@
                             $nomComp = $tab[1];
                             $catComp = $tab[2];
                             $dateDebutComp = new DateTime($tab[3]);
-                            $dateFinComp = new DateTime($tab[4]);
+                            $dateFinComp = !empty($tab[4]) ? new DateTime($tab[4]) : null;
                             $etatComp = $tab[5];
                             $projetComp = $tab[6];
                             $urlComp = $tab[7];
@@ -218,22 +218,23 @@
                             $formatterMonth = new IntlDateFormatter('fr_FR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
                             $formatterMonth->setPattern('MMMM');
 
-                            // Comparaison logique
-                            if ($dateDebutComp->format('Y-m') === $dateFinComp->format('Y-m')) {
-                                // Même mois et année
-                                $date = $formatterFull->format($dateDebutComp);
-                            } elseif ($dateDebutComp->format('Y') === $dateFinComp->format('Y')) {
-                                // Même année mais mois différents
-                                $dateDebutStr = $formatterMonth->format($dateDebutComp);
-                                $dateFinStr = $formatterMonth->format($dateFinComp);
-                                $annee = $dateDebutComp->format('Y');
-                                $date = "$dateDebutStr - $dateFinStr $annee";
+                            if ($dateDebutComp !== null && $dateFinComp !== null) {
+                                if ($dateDebutComp->format('Y-m') === $dateFinComp->format('Y-m')) {
+                                    $date = $formatterFull->format($dateDebutComp);
+                                } elseif ($dateDebutComp->format('Y') === $dateFinComp->format('Y')) {
+                                    $dateDebutStr = $formatterMonth->format($dateDebutComp);
+                                    $dateFinStr = $formatterMonth->format($dateFinComp);
+                                    $annee = $dateDebutComp->format('Y');
+                                    $date = "$dateDebutStr - $dateFinStr $annee";
+                                } else {
+                                    $dateDebutStr = $formatterFull->format($dateDebutComp);
+                                    $dateFinStr = $formatterFull->format($dateFinComp);
+                                    $date = "$dateDebutStr - $dateFinStr";
+                                }
                             } else {
-                                // Mois et années différentes
-                                $dateDebutStr = $formatterFull->format($dateDebutComp);
-                                $dateFinStr = $formatterFull->format($dateFinComp);
-                                $date = "$dateDebutStr - $dateFinStr";
+                                $date = "Date inconnue";
                             }
+
 
 
                             if($urlComp){

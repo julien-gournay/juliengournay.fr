@@ -128,7 +128,7 @@ if ($mabase) {
 
             // COMPETENCES
             if($mabase){
-                $res_comp = mysqli_query($cnt,"SELECT type_competence.nom,type_competence.sousTitre,competence.nomComp FROM competence, lien_competence, type_competence WHERE lien_competence.idComp = competence.idComp AND lien_competence.idCatComp = type_competence.id AND competence.projet=22 ORDER BY type_competence.id;");
+                $res_comp = mysqli_query($cnt,"SELECT type_competence.nom,type_competence.sousTitre,competence.nomComp FROM competence, lien_competence, type_competence WHERE lien_competence.idComp = competence.idComp AND lien_competence.idCatComp = type_competence.id AND competence.projet=$id ORDER BY type_competence.id;");
                 if (mysqli_fetch_row($res_comp)) {
                     echo("<div><h2>Compétences</h2>
                             <p>Pour ce projet, j'ai pu développer diverses compétences selon le tableau de synthèse de BTS SIO : </p>");

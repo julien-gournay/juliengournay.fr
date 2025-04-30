@@ -182,6 +182,7 @@
             <div class="header-cardCompetence">
                 <h2 class="title-section">Mes compétences</h2>
                 <button onclick="location.href='files/tableau_synthese_slam.xlsx'" class="button_cv">Télécharger mon tableau des compétences</button>
+                <button onclick="location.href='https://documentation.juliengournay.fr/'" class="button_cv">Centre de documentation</button>
             </div>
             <div class="grid-cardCompetence">
                 <?php
@@ -236,8 +237,6 @@
                             } else {
                                 $date = "Date inconnue";
                             }
-
-
 
                             if($urlComp){
                                 echo("<a href='$urlComp' target='_blank'>👉 $nomComp [$date]</a>");

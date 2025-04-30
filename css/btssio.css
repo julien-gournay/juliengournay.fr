@@ -1,6 +1,7 @@
 #sec-2{
     display: flex;
     height: auto;
+    min-height: auto;
     padding: 3% 6%;
     justify-content: center;
     align-items: center;
@@ -16,7 +17,7 @@
 }
 #sec-4{
     display: flex;
-    /*min-height: 80vh;*/
+    min-height: auto;
     height: auto;
     padding: 3% 6%;
     justify-content: center;
@@ -25,6 +26,7 @@
 }
 #sec-5{
     display: flex;
+    min-height: auto;
     height: auto;
     padding: 3% 6%;
     justify-content: center;
@@ -34,6 +36,7 @@
 #sec-6{
     display: flex;
     height: auto;
+    min-height: auto;
     padding: 3% 6%;
     justify-content: center;
     align-items: center;
@@ -389,7 +392,7 @@ figure:hover+span {
 }
 .sec6-img{
     width: 60rem;
-    height: 20rem;
+    height: 30rem;
     border-radius: 15px;
     overflow: hidden;
 }

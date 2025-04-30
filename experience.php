@@ -169,8 +169,7 @@
 
                 <h2 class="title-section">Mon parcours de certification</h2>
                 <div class="certifC-cadre">
-
-                    <h4 class="">Epreuve BTS SIO EF3</h4>
+                    <h3 class="">Epreuve BTS SIO EF3</h3>
                     <div class="certifC-cadre-figma">
                         <iframe class="certifC-cadre-figma-iframe" style="border: 1px solid rgba(0, 0, 0, 0.1);"  height="450" src="https://embed.figma.com/deck/WGptB7BA3BIiCePmhwZrYl/Certification-Figma?node-id=5-325&viewport=-1259%2C-98%2C0.53&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
                     </div>
@@ -235,7 +234,7 @@
                                     $date = "$dateDebutStr - $dateFinStr";
                                 }
                             } else {
-                                $date = "Date inconnue";
+                                $date = $formatterFull->format($dateDebutComp);;
                             }
 
                             if($urlComp){

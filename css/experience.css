@@ -313,7 +313,6 @@ p{
 }
 
 
-
 .certifC-cadre{
     width: 100%;
     height: 100%;
@@ -323,4 +322,51 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.certifC-cadre-figma{
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    object-fit: contain;
+}
+.certifC-cadre-figma-iframe{
+    width: 100%;
+}
+
+
+
+
+
+
+.header-cardCompetence{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    align-items: center;
+    gap: 1rem;
+}
+.header-cardCompetence .title-section{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.header-cardCompetence button{
+    width: fit-content;
+}
+.grid-cardCompetence{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.grid-cardCompetence h3{
+    color: var(--orange);
+}
+.grid-cardCompetence a{
+    color: blue;
+}
+.grid-cardCompetence a:hover{
+    text-decoration: underline;
+    background-color: var(--orange);
+    color: white;
+    width: fit-content;
 }

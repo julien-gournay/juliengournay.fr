@@ -1,51 +1,40 @@
-section {     /* ----- Toute section ----- */
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-}
-#sec-1{     /*SECTION 1 : EN TETE*/
-    background: var(--color-bg2);
-    color: var(--color-text1);
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
 #sec-2{
     display: flex;
-    min-height: 80vh;
-    padding: 4.75rem 9.375rem;
+    height: auto;
+    padding: 3% 6%;
     justify-content: center;
     align-items: center;
     background-color: var(--color-bg1);
 }
 #sec-3{
     display: flex;
-    min-height: 80vh;
-    padding: 4.75rem 9.375rem;
+    height: auto;
+    padding: 3% 6%;
     justify-content: center;
     align-items: center;
     background-color: var(--color-bg2);
 }
 #sec-4{
     display: flex;
-    min-height: 80vh;
-    padding: 4.75rem 9.375rem;
+    /*min-height: 80vh;*/
+    height: auto;
+    padding: 3% 6%;
     justify-content: center;
     align-items: center;
     background-color: var(--color-bg1);
 }
 #sec-5{
     display: flex;
-    min-height: 80vh;
-    padding: 4.75rem 9.375rem;
+    height: auto;
+    padding: 3% 6%;
     justify-content: center;
     align-items: center;
     background-color: var(--color-bg2);
 }
 #sec-6{
     display: flex;
-    min-height: 80vh;
-    padding: 4.75rem 9.375rem;
+    height: auto;
+    padding: 3% 6%;
     justify-content: center;
     align-items: center;
     background-color: var(--color-bg1);
@@ -53,28 +42,6 @@ section {     /* ----- Toute section ----- */
 
 a{
     text-decoration: none;
-}
-#sec-1 h1 {
-	position: flex;
-    text-align: center;
-	background: linear-gradient(90deg, #FF0000, #8F00FF);
-    /*background: linear-gradient(90deg, #FFFFFF, #666666);*/
-	background-size: 400%;
-    /*font-weight: 1500;*/
-    font-weight: revert;
-    font-size: 15vw;
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-	animation: animate 5s linear infinite alternate;
-}
-@keyframes animate {
-	0% {
-		background-position: 0%;
-	}
-
-	100% {
-		background-position: 100%;
-	}
 }
 h3{
     font-size: 2.5rem;
@@ -102,7 +69,7 @@ h3{
 /* ----- SECTION 2 ----- */
 .sec2-frame{
     display: flex;
-    width: 71.25rem;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
@@ -111,12 +78,12 @@ h3{
 .sec2-text{
     display: flex;
     align-items: flex-start;
-    gap: 8.625rem;
+    gap: 2rem;
     align-self: stretch;
 }
 .sec2-text-titre{
     display: flex;
-    width: 35.1875rem;
+    width: 50%;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
@@ -126,6 +93,7 @@ h3{
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
+    width: 50%;
     flex: 1 0 0;
 }  
 .sec2-box{
@@ -133,11 +101,13 @@ h3{
     align-items: flex-start;
     justify-content: space-between;
     align-self: stretch;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 .sec2-boite{
     height: 26rem;
     width: 35rem;
+    min-width: 25rem;
     display: flex;
     padding: 2.5rem;
     flex-direction: column;
@@ -223,7 +193,7 @@ h3{
 /* ----- SECTION 3 ----- */
 .sec3-frame{
     display: flex;
-    width: 71.25rem;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
@@ -247,10 +217,11 @@ h3{
     align-items: flex-start;
     justify-content: space-between;
     align-self: stretch;
+    gap: 2rem;
 }
 .sec3-boite{
     display: flex;
-    width: 34.375rem;
+    width: 50%;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.8125rem;
@@ -263,12 +234,12 @@ h3{
     background:  lightgray 50% / cover no-repeat;
 }
  Zoom In #1 */
- figure {
-	width: 34.375rem;
-	margin: 0;
-	padding: 0;
-	background: #fff;
-	overflow: hidden;
+figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
     height: 21.25rem;
     align-self: stretch;
     border-radius: 0.5rem;
@@ -278,13 +249,14 @@ figure:hover+span {
 	opacity: 1;
 }
 .sec3-boite figure img {
-    width: 34.375rem;
+    width: 100%;
     height: 21.25rem;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
     background:  lightgray 50% / cover no-repeat;
+    object-fit: cover;
 }
 .sec3-boite figure:hover img {
 	-webkit-transform: scale(1.3);
@@ -315,7 +287,8 @@ figure:hover+span {
 /* ----- SECTION 4 ----- */
 .sec4-frame{
     display: flex;
-    width: 71.25rem;
+    width: 100%;
+    height: auto;
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
@@ -353,7 +326,7 @@ figure:hover+span {
 /* ----- SECTION 5 ----- */
 .sec5-frame{
     display: flex;
-    width: 71.25rem;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 3rem;
@@ -387,7 +360,7 @@ figure:hover+span {
 /* ----- SECTION 6 ----- */
 .sec6-frame{
     display: flex;
-    width: 71.25rem;
+    width: 100%;
     flex-direction: row-reverse;
     align-items: flex-start;
     gap: 3rem;
@@ -424,4 +397,48 @@ figure:hover+span {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+    section{
+        padding: 6% 6% !important;
+    }
+    .sec2-boite {
+        height: auto;
+    }
+    .sec2-text{
+        flex-direction: column;
+    }
+    .sec2-text-titre{
+        width: 100%;
+    }
+    .sec2-text-info{
+        width: 100%;
+    }
+
+
+    .sec3-box{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .sec3-boite{
+        width: 100%;
+        gap: 1rem;
+    }
+
+
+    .sec6-frame{
+        flex-direction: column;
+    }
+    .sec6-text{
+        align-items: center;
+        width: 100%;
+    }
+    h3{
+        text-align: left !important;
+        width: 100%;
+    }
+    .sec6-img{
+        width: 100%;
+    }
 }

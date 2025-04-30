@@ -72,7 +72,7 @@
     <!-- NAVBAR -->
     <?php include 'navbar.php'; ?>
 
-    <section id="sec-1">
+    <section id="sec-i">
         <div class="cadre">
             <div class="cadre-info">
                 <div class="cadre-info-text">
@@ -94,8 +94,7 @@
         <?php
             print("
                 <article>
-                $contenu
-
+                    $contenu
                 </article>
             ");
         ?>

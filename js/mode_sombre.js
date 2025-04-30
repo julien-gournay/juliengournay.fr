@@ -20,6 +20,7 @@ icon.onclick = function() {
     localStorage.setItem('themeMode', isDarkMode ? 'dark' : 'light');
     updateTheme();
 };
+
 function updateTheme() {
     icon.src = isDarkMode ? "img/sun.png" : "img/moon.png";
     logo.src = isDarkMode ? "img/logoName.png" : "img/logoName_s.png";

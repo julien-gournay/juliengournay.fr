@@ -40,11 +40,9 @@
         
     </section>
 
-
     <!-- FOOTER -->
     <?php include 'footer.php'; ?>
 
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/mode_sombre.js"></script> 
 </body>
 </html>

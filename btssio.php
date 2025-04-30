@@ -102,8 +102,8 @@
                     </div>
                     <p class="des_p">En février, j'ai effectué un stage de six semaines dans les locaux de la Mairie de Tourcoing. Ce stage fut une nouvelle occasion d’apprendre de nouvelles méthodes de développement et de valider mon BTS.</p>
                     <div class="sec3-boite-bt">
-                        <button onclick="location.href='files/stage/convention_stage_mtourcoing'" class="button_cv">Convention de stage</button>
-                        <button onclick="location.href='#'" class="button_cv" disabled>Certificat de stage (indisponible)</button>
+                        <button onclick="location.href='files/stage/presentation_stage_tourcoing.pdf'" class="button_cv">Présentation projet</button>
+                        <button onclick="location.href='files/stage/certificat_stage_tourcoing.pdf'" class="button_cv">Certificat de stage</button>
                     </div>
                 </div>
             </div>

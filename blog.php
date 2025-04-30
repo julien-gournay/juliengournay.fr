@@ -25,8 +25,8 @@
         include 'php/config.php';
 
         if($mabase){
-            $req = "SELECT * FROM `article` WHERE `statut`='publie' ORDER BY `datePublication` DESC;";
-            $res = mysqli_query($cnt,$req);
+            $res1 = mysqli_query($cnt,"SELECT * FROM `article` WHERE `statut`='publie' ORDER BY `datePublication` DESC;");
+            $res2 = mysqli_query($cnt,"SELECT * FROM `article` WHERE `statut`='priorité' LIMIT 1;");
         }
     ?>
 
@@ -39,6 +39,59 @@
         </a>
     </section>
 
+    <section id="sec-2">
+        <div class="container">
+            <div class="liste-cadre-titre">
+                <h3>Article à la une</h3>
+            </div>
+            <?php
+            // Itérer sur les résultats
+            while ($tab = mysqli_fetch_row($res2)) {
+                $titre = $tab[1];
+                $description = $tab[2];
+                $contenu = $tab[3];
+                $auteur = $tab[4];
+                $datePublication = $tab[5];
+                $dateModification = $tab[6];
+                $categorie = $tab[8];
+                $imgConverture = $tab[9];
+                $url = $tab[11];
+                $duree = $tab[12];
+
+
+                $datePub = new DateTime($datePublication);
+                $formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::FULL, IntlDateFormatter::NONE, null, null, 'd MMMM yyyy');
+                $datePubFormatee = $formatter->format($datePub);
+
+                echo("<a href=\"article.php?url=$url\"><div class=\"sec2-cadre\">
+                        <div class=\"sec2-cadre-info\">
+                            <div class=\"sec2-cadre-info-text\">
+                                <div class=\"sec2-tags\">");
+                                if($tab[10] != null){
+                                    $tags = json_decode($tab[10], true);
+                                    if($tags){
+                                        foreach ($tags as $tag) {
+                                            echo("<span class=\"sec2-tag\">$tag</span>");
+                                        }
+                                    }
+                                }
+                            echo("</div>
+                            <div>
+                                <h1>$titre</h1>
+                                <p class=\"sec2-pdate\">$datePubFormatee | $duree min de lecture</p>
+                            </div>
+                            <p class=\"sec2-pdescription\">$description</p>
+                            </div>
+                        </div>
+                        <div class=\"sec2-cadre-img\">
+                            <img class=\"ad5-block ad5-width-100% ad5-radius-lg\" src=\"$imgConverture\" alt=\"\">
+                        </div>
+                    </div></a>");
+            }
+            ?>
+        </div>
+    </section>
+
     <section id="sec-3">
         <div class="container">
             <div class="liste-cadre-titre">
@@ -47,7 +100,7 @@
             <div class="liste-cadre">
                 <?php
                     // Itérer sur les résultats
-                    while ($tab = mysqli_fetch_row($res)) {
+                    while ($tab = mysqli_fetch_row($res1)) {
                         $titre = $tab[1];
                         $description = $tab[2];
                         $contenu = $tab[3];

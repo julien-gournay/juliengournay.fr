@@ -1,6 +1,8 @@
 # Environnement & Config
 .env
+.dev
 DB
+/html/
 
 # Dépendances
 vendor

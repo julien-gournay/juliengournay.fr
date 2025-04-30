@@ -118,13 +118,14 @@
                 ?>
             </div>
         </div>
+
         <div class="tab-content" id="certif-card">
             <h2 class="title-section">Mes certifications et diplômes</h2>
             <div class="certif-sec">
                 <div class="grid-cardCertif">
                     <?php
                         if($mabase){
-                            $req = "SELECT * FROM certification";
+                            $req = "SELECT certification.*, document.lien FROM certification,document WHERE certification.idDocument = document.idDoc;";
                             $res = mysqli_query($cnt,$req);
                             $nb=0;
                         }
@@ -138,19 +139,21 @@
                             $urlDiplome = $tab[5];
                             $idDocument = $tab[6];
                             $imgOrg = $tab[7];
-                            $imgDip = $tab[8];
+                            $urlDocument = $tab[8];
                             $nb++;
 
                             $formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::NONE, IntlDateFormatter::NONE, NULL, NULL, 'MMMM yyyy');
                             $date = new DateTime($dateEmission);
 
-                            echo("<a  class=\"acardCertif\" href=\"$urlDiplome\"><div class=\"cardCertif\">
+                            echo("<a  class=\"acardCertif\" href=\"$urlDocument\"><div class=\"cardCertif\">
                                     <div class=\"cardCertif-ct\">
                                         <div class=\"cardCertif-txt\">
                                             <h2 class=\"card-title\">$nomCertif</h2>
                                             <p class=\"card-info\">Organisme : $organisme</p>
                                             <p class=\"card-info\">Délivré en ".$formatter->format($date)."</p>");
-                                            if($idDiplome > 0){echo("<p class=\"card-info\">Id du diplôme : $idDiplome</p>");}
+                                            if($idDiplome > 0){
+                                                echo("<p class=\"card-info\">Id du diplôme : $idDiplome ($urlDiplome)</p>");
+                                            }
                                         echo("</div>
                                     </div>
                                     <div class=\"cardCertif-cover\">
@@ -163,42 +166,88 @@
                         }
                     ?>
                 </div>
+
+                <h2 class="title-section">Mon parcours de certification</h2>
                 <div class="certifC-cadre">
-                    <h3 class="">Mon parcours de certification</h3>
+
                     <h4 class="">Epreuve BTS SIO EF3</h4>
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/deck/WGptB7BA3BIiCePmhwZrYl/Certification-Figma?node-id=5-325&viewport=-1259%2C-98%2C0.53&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+                    <div class="certifC-cadre-figma">
+                        <iframe class="certifC-cadre-figma-iframe" style="border: 1px solid rgba(0, 0, 0, 0.1);"  height="450" src="https://embed.figma.com/deck/WGptB7BA3BIiCePmhwZrYl/Certification-Figma?node-id=5-325&viewport=-1259%2C-98%2C0.53&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="tab-content" id="video-card">
-            <h2 class="title-section">Mes compétences</h2>
-            <div class="grid-card">
+        <div class="tab-content" id="competence-card">
+            <div class="header-cardCompetence">
+                <h2 class="title-section">Mes compétences</h2>
+                <button onclick="location.href='files/tableau_synthese_slam.xlsx'" class="button_cv">Télécharger mon tableau des compétences</button>
+                <button onclick="location.href='https://documentation.juliengournay.fr/'" class="button_cv">Centre de documentation</button>
+            </div>
+            <div class="grid-cardCompetence">
                 <?php
                     if($mabase){
-                        $req = "SELECT * FROM portfolio WHERE affichage=\"oui\" AND type=3";
-                        $res = mysqli_query($cnt,$req);
+                        $res4 = mysqli_query($cnt,"SELECT * FROM type_competence");
                         $nb=0;
                     }
 
-                    while ($tab = mysqli_fetch_row($res)) {
-                        $id = $tab[0];
-                        $titre = $tab[1];
-                        $soustitre = $tab[2];
-                        $description = $tab[3];
-                        $annee = $tab[4];
-                        $type = $tab[5];
-                        $image = $tab[6];
-                        $lien = $tab[7];
-                        $affichage = $tab[8];
+                    while ($tab = mysqli_fetch_row($res4)) {
+                        $idTC = $tab[0];
+                        $nomTC = $tab[1];
+                        $sousTitreTC = $tab[2];
+                        $descriptionTC = $tab[3];
                         $nb++;
 
-                        if(empty($image)){
-                            $image="https://dev.juliengournay.fr/img/portfolio/none.png";
+                        echo("<br><h3>$nomTC - $sousTitreTC</h3>
+                            <p>$descriptionTC</p>");
+                        if($mabase){
+                            $res5 = mysqli_query($cnt,"SELECT * FROM competence, lien_competence WHERE lien_competence.idCatComp = $idTC AND lien_competence.idComp=competence.idComp;");
+                            $nb=0;
+                        }
+                        while ($tab = mysqli_fetch_row($res5)) {
+                            $idComp = $tab[0];
+                            $nomComp = $tab[1];
+                            $catComp = $tab[2];
+                            $dateDebutComp = new DateTime($tab[3]);
+                            $dateFinComp = !empty($tab[4]) ? new DateTime($tab[4]) : null;
+                            $etatComp = $tab[5];
+                            $projetComp = $tab[6];
+                            $urlComp = $tab[7];
+
+                            // Formatter français
+                            $formatterFull = new IntlDateFormatter('fr_FR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+                            $formatterFull->setPattern('MMMM yyyy');
+
+                            $formatterMonth = new IntlDateFormatter('fr_FR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+                            $formatterMonth->setPattern('MMMM');
+
+                            if ($dateDebutComp !== null && $dateFinComp !== null) {
+                                if ($dateDebutComp->format('Y-m') === $dateFinComp->format('Y-m')) {
+                                    $date = $formatterFull->format($dateDebutComp);
+                                } elseif ($dateDebutComp->format('Y') === $dateFinComp->format('Y')) {
+                                    $dateDebutStr = $formatterMonth->format($dateDebutComp);
+                                    $dateFinStr = $formatterMonth->format($dateFinComp);
+                                    $annee = $dateDebutComp->format('Y');
+                                    $date = "$dateDebutStr - $dateFinStr $annee";
+                                } else {
+                                    $dateDebutStr = $formatterFull->format($dateDebutComp);
+                                    $dateFinStr = $formatterFull->format($dateFinComp);
+                                    $date = "$dateDebutStr - $dateFinStr";
+                                }
+                            } else {
+                                $date = "Date inconnue";
+                            }
+
+                            if($urlComp){
+                                echo("<a href='$urlComp' target='_blank'>👉 $nomComp [$date]</a>");
+                            }
+                            else{
+                                echo("<a href='projet.php?url=$projetComp' target='_blank'>👉 $nomComp [$date]</a>");
+                            }
                         }
                     }
-                    if($nb ==0){
-                        echo("<div><h2>Aucune données n'est disponible actuellement !</h2></div>");
+                    if(empty($idTC)){
+                        echo("<div><h2>Aucune compétence n'est disponible actuellement !</h2></div>");
                     }
                 ?>
             </div>

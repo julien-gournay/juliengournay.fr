@@ -405,6 +405,7 @@ figure:hover+span {
     }
     .sec2-boite {
         height: auto;
+        min-width: auto;
     }
     .sec2-text{
         flex-direction: column;
@@ -426,6 +427,14 @@ figure:hover+span {
         gap: 1rem;
     }
 
+    #sec-4, #sec-5{
+        height: auto;
+        min-height: auto;
+    }
+
+    .sec4-text-bt{
+        flex-direction: column;
+    }
 
     .sec6-frame{
         flex-direction: column;

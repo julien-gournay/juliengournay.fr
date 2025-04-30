@@ -14,13 +14,12 @@ html{
 }
 body{
     overflow-x: hidden;
-    background: url("img/bg_soon.png");
+    /*background: url("img/bg_soon.png");*/
     background-size: cover;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     background-repeat: no-repeat;
 }
-
 
 
 /* ----- Barre de navigation ----- */
@@ -38,25 +37,25 @@ body{
 /* ----- Configuration sections page ----- */
 section {
     min-height: 100vh;
-    width: 100%;
+    width: 100wh;
     display: flex;
 }
 #sec-1{
     color: var(--color-text2);
     justify-content:center;
     align-items: center;
+    padding: 2rem;
 }
 
 
 h1 {
     color: var(--color-text2);
-    font-size: 70px;
-    font-weight: 400px;
-    color: var(--orange);
+    font-size: 5rem;
+    font-weight: 800;
 }
 p {
     color: var(--color-text2);
-    font-size: 25px;
+    font-size: 1.8rem;
 }
 .wrapper {
     text-align: left;
@@ -64,4 +63,15 @@ p {
 .imgmaintenance{
     width: 20em;
     margin-left: 50px;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 }

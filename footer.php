@@ -34,14 +34,14 @@
                     <a href="credit.php"><p>Crédit</p></a>
                     <a href="contact.php"><p>Contact</p></a>
                     <a href="plandusite.php"><p>Plan du site</p></a>
-                    <a href="technique.php"><p>Technique</p></a>
+                    <a href="https://status.juliengournay.fr/"><p>Statut</p></a>
 
                 </div>
             </div>
         </div>
         <hr class="line"/>
         <div class="footer-plus">
-            <p class="footer-plus-p">Copyright ©2024-2025 Julien Gournay</p>
+            <p class="footer-plus-p">©2024-2025 Julien Gournay</p>
             <a href="login.php"><p class="footer-plus-p">Espace Admin</p></a>
             <a href="https://github.com/julien-gournay/juliengournay.fr/releases/tag/v1.2.0"><p class="footer-plus-p">Version 1.1.2</p></a>
             <button id="theme-toggle">

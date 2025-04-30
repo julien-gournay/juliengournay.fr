@@ -125,7 +125,7 @@
                 <div class="grid-cardCertif">
                     <?php
                         if($mabase){
-                            $req = "SELECT * FROM certification";
+                            $req = "SELECT certification.*, document.lien FROM certification,document WHERE certification.idDocument = document.idDoc;";
                             $res = mysqli_query($cnt,$req);
                             $nb=0;
                         }
@@ -139,19 +139,21 @@
                             $urlDiplome = $tab[5];
                             $idDocument = $tab[6];
                             $imgOrg = $tab[7];
-                            //$imgDip = $tab[8];
+                            $urlDocument = $tab[8];
                             $nb++;
 
                             $formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::NONE, IntlDateFormatter::NONE, NULL, NULL, 'MMMM yyyy');
                             $date = new DateTime($dateEmission);
 
-                            echo("<a  class=\"acardCertif\" href=\"$urlDiplome\"><div class=\"cardCertif\">
+                            echo("<a  class=\"acardCertif\" href=\"$urlDocument\"><div class=\"cardCertif\">
                                     <div class=\"cardCertif-ct\">
                                         <div class=\"cardCertif-txt\">
                                             <h2 class=\"card-title\">$nomCertif</h2>
                                             <p class=\"card-info\">Organisme : $organisme</p>
                                             <p class=\"card-info\">Délivré en ".$formatter->format($date)."</p>");
-                                            if($idDiplome > 0){echo("<p class=\"card-info\">Id du diplôme : $idDiplome</p>");}
+                                            if($idDiplome > 0){
+                                                echo("<p class=\"card-info\">Id du diplôme : $idDiplome ($urlDiplome)</p>");
+                                            }
                                         echo("</div>
                                     </div>
                                     <div class=\"cardCertif-cover\">

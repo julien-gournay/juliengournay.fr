@@ -4,10 +4,10 @@
     align-items: center;
     min-height: 100vh;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 #sec-1 h2 {
-	position: flex;
+	display: flex;
     text-align: center;
 	background: linear-gradient(90deg, #FF0000, #8F00FF);
     /*background: linear-gradient(90deg, #FFFFFF, #666666);*/

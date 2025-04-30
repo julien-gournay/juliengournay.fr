@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Erreur 404 - Julien Gournay</title>
+    <meta name="description" content="Author: Julien Gournay">
+    <meta name="author" content="Julien Gournay">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/404.css">
+    <link rel="stylesheet" type="text/css" href="css/seting.css">
+    <link rel="shortcut icon" type="image/png" href="img/logo_2023.svg">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6V1XWV51D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-T6V1XWV51D');
+    </script>
+</head>
+
+<body>  
+    <nav class="navbar">
+        <a href="index.html"><img src="img/logoName.png" id="logoName" alt="Logo écrit Julien Gournay"></a>
+    </nav>
+
+    <section id="sec-1">
+        <div class="wrapper">
+            <h1 class="static-txt">Oups, Erreur 404 !</h1>
+            <p>Il semblerais que la page que vous cherchez n'existe pas</p>
+            <div class="div-button">
+                <button type="button" onclick="window.location.href = 'index.html'">Retour à l'accueil</button>
+                <button type="button" onclick="window.location.href = '#'">Plan du site</button>
+            </div>
+        </div>
+        <img src="img/page-not-found-svgrepo-com.svg" class="img404" alt="Logo erreur 404">
+    </section>
+</body>
+</html>

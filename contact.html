@@ -1,12 +1,12 @@
 <html lang="fr">
 <head>
-    <?php include 'head.php'; ?>
-
+    <meta charset="UTF-8"/>
     <title>Julien Gournay</title>
-    <meta name="description" content="Vous souhaitez me contacter pour diverses sujets, venez me parler.">
-    <meta name="keywords" content="julien,gournay,sio,bts,informatique,cv,portfolio,developpeur">
-
-    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/seting.css">
+    <link rel="stylesheet" type="text/css" href="css/infoalerte.css">
+    <link rel="shortcut icon" type="image/png" href="img/logo_2023.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- Google tag Analystic (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6V1XWV51D"></script>
@@ -20,17 +20,25 @@
 
 <body>
     <!-- NAVBAR -->
-    <?php include 'navbar.php'; ?>
+    <nav class="navbar">
+        <img src="img/logoName_s.png" href="index.html" id="logoName">
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy.html" type="submit" class="btn" onclick="openPopup()">Confidentialité</a></li>
+                <li class="active"><a href="contact.html" type="submit" class="btn" onclick="openPopup()">Contact</a></li>
+            </ul>
+        </div>
+        <img src="img/moon.png" id="icon">
+    </nav>
+
 
     <!-- SECTION 1 : EN TETE -->
     <section id="sec-1">
         <div>
-            <h1>CONTACT</h1>
-            <!--<p class="p1">Vous souhaitez me poser une question, me faire une demande, avoir des renseignements, me recruter... Contacter moi !</p>-->
+            <h1>ME CONTACTER</h1>
+            <p class="p1">Vous souhaitez me poser une question, me faire une demande, avoir des renseignements, me recruter... Contacter moi !</p>
         </div>
-        <a href="#sec-2">
-            <div class="scroll-down"></div>   
-        </a>          
     </section>
 
     <section id="sec-2">
@@ -42,11 +50,11 @@
                   <em class="chip__icon-wrapper">
                     <svg class="cd-icon" viewBox="0 0 12 12" aria-hidden="true"><line x1="6" y1="1.75" x2="6" y2="7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><circle cx="6" cy="10" r="1" fill="currentColor"/></svg>
                   </em>
-                  <i class="chip__label">Suite à un problème technique, le formulaire ne fonctionne pas, veillez réessayer plus tard.<br>Une mise à jour de correctif est prévue prochainement.</i>
+                  <i class="chip__label">Suite à un problème technique, le formulaire ne fonctionne pas, veillez réessayer plustard.<br>Une mise à jour de correctif est prévue dans la journée.</i>
                 </span>
             </li>-->
 
-            <form action="php/mail.php" method="post" enctype="multipart/form-data">
+            <form action="mail.php" method="post" enctype="multipart/form-data">
                 <div class="champ">
                     <label for="nom">Nom : *</label>
                     <input type="text" name="nom" id="nom" required>
@@ -75,26 +83,30 @@
                     <label for="message">Message : *</label>
                     <textarea name="message" id="message" required></textarea>
                 </div>
-                <div class="champ">
+                <!--<div class="champ">
                     <label for="message">Pièce jointe :</label>
                     <input type="file" name="file" id="file">
-                </div>
-
-                <!--<input type="text" name="honeypot" style="display:none;">
-                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-                <div class="g-recaptcha" data-sitekey="6Leq1soqAAAAAOjU7LMo09GSDwTJQm6qksoBAyT-"></div>-->
-
+                </div>-->
                 <button type="submit">Envoyer</button>
             </form>
             <div class="message-container" id="message-container"></div>
           </div>
     </section>
     
-    <!-- FOOTER -->
-    <?php include 'footer.php'; ?>
+
+
+    <footer class="footer">     <!--Section Footer page-->
+        <div class="foot_lien">
+            <p class="footerp">©2023 par Julien Gournay.</p>
+            <div class="footer_link">
+                <a href="https://frweb10.pulseheberg.net:8443/smb/web/view" target="_blank">Admin page</a>
+                <a href="privacy.html" type="submit" class="btn">Confidentialité</a>
+            </div>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/mode_sombre.js"></script>
-    <!--<script type="text/javascript" src="js/contact.js"></script>-->
+    <script type="text/javascript" src="js/contact.js"></script> 
 </body>
 </html>

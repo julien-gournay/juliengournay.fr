@@ -134,7 +134,7 @@ button:disabled {
     position: absolute;
     padding: 1rem 2rem;
     display: flex;
-    height: 3.8rem;
+    height: auto;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;

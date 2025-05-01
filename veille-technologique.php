@@ -65,7 +65,8 @@
     </section>
 
     <section id="sec-4">
-    <?php
+        <iframe src="https://secretive-cicada-052.notion.site/ebd/199881d0d2df8062b4e6e92856750e36" width="100%" height="800" frameborder="0" allowfullscreen></iframe>
+    <?php /*
         $nb = 0;
         echo("<div class=\"list_card\">");
         While ($tab=mysqli_fetch_row($res)){
@@ -96,7 +97,7 @@
             </div>");
         }
         echo("</div>");
-        echo("Nombre d'article sur la veille : $nb");
+        echo("Nombre d'article sur la veille : $nb"); */
     ?>
     </section>
 

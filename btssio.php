@@ -115,8 +115,8 @@
             <div class="sec4-text">
                 <h3>Mes certifications et<br>compétences</h3>
                 <div class="sec4-text-bt">
-                    <button onclick="location.href='experience.php'" class="button_cv">Voir tout les diplômes et certifications</button>
-                    <button onclick="location.href='files/tableau_synthese_slam.xlsx'" class="button_cv">Télécharger mon tableau des compétences</button>
+                    <button onclick="location.href='experience.php'" class="button_cv">Voir tous les diplômes et certifications</button>
+                    <button onclick="location.href='files/tableau_synthese_slam.pdf'" class="button_cv">Télécharger mon tableau des compétences</button>
                 </div>
             </div>
             <!--<div class="sec4-box">

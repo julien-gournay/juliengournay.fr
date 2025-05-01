@@ -43,7 +43,7 @@
         <div class="footer-plus">
             <p class="footer-plus-p">©2024-2025 Julien Gournay</p>
             <a href="login.php"><p class="footer-plus-p">Espace Admin</p></a>
-            <a href="https://github.com/julien-gournay/juliengournay.fr/releases/tag/v1.2.0"><p class="footer-plus-p">Version 1.1.2</p></a>
+            <a href="https://github.com/julien-gournay/juliengournay.fr/releases/tag/v1.1.5"><p class="footer-plus-p">Version 1.1.5</p></a>
             <button id="theme-toggle">
                 <img id="icon" src="img/moon.png" alt="Basculer le thème">
             </button>

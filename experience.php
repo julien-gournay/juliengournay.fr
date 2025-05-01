@@ -180,12 +180,14 @@
         <div class="tab-content" id="competence-card">
             <div class="header-cardCompetence">
                 <h2 class="title-section">Mes compétences</h2>
-                <button onclick="location.href='files/tableau_synthese_slam.xlsx'" class="button_cv">Télécharger mon tableau des compétences</button>
+                <button onclick="location.href='files/tableau_synthese_slam.pdf'" class="button_cv">Télécharger mon tableau des compétences</button>
+                <button onclick="location.href='files/liste_competences.pdf'" class="button_cv">Liste complete des compétences</button>
                 <button onclick="location.href='https://documentation.juliengournay.fr/'" class="button_cv">Centre de documentation</button>
             </div>
             <div class="grid-cardCompetence">
+                <iframe src="https://secretive-cicada-052.notion.site/ebd/1e1881d0d2df806a82d3cefc68dc2b24" width="100%" height="700px" frameborder="0" allowfullscreen></iframe>
                 <?php
-                    if($mabase){
+                    /*if($mabase){
                         $res4 = mysqli_query($cnt,"SELECT * FROM type_competence");
                         $nb=0;
                     }
@@ -247,7 +249,7 @@
                     }
                     if(empty($idTC)){
                         echo("<div><h2>Aucune compétence n'est disponible actuellement !</h2></div>");
-                    }
+                    }*/
                 ?>
             </div>
         </div>

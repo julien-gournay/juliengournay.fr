@@ -3,7 +3,7 @@
 <head>
     <?php include 'head.php'; ?>
     <title>Julien Gournay</title>
-    <meta name="description" content="Je m'appelle Julien Gournay, j'ai 19 ans et j'habite dans la Métropole Lilloise en France. Je suis actuellement Etudiant en BTS SIO (Informatique).">
+    <meta name="description" content="Je m'appelle Julien Gournay, j'ai 21 ans et j'habite dans la Métropole Lilloise. Je suis actuellement Etudiant en BTS SIO (Informatique).">
     <meta name="keywords" content="julien,gournay,sio,bts,informatique,cv,portfolio,developpeur">
 
     <link rel="stylesheet" type="text/css" href="css/index.css">

@@ -3,9 +3,10 @@
 .dev
 DB
 /html/
+.htpasswd
 
 # Dépendances
-vendor
+vendor/
 
 # IDE & OS
-.idea
+.idea/

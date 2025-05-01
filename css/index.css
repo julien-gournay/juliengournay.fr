@@ -10,6 +10,8 @@ section {     /* ----- Toute section ----- */
     align-items: center;
     padding: 2rem;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
 #sec-2{     /*SECTION 2 : INFORMATION*/
@@ -128,7 +130,11 @@ section {     /* ----- Toute section ----- */
 @media (max-width: 600px) {
     .blob {
         width: 250px;
-        height: 250px;
+        height: 250px
+    }
+
+    .dt2-s {
+        font-size: 2.5rem;
     }
 }
 
@@ -273,7 +279,6 @@ section {     /* ----- Toute section ----- */
 .circle div:nth-child(2){
     background: var(--d);
     clip-path: circle(200px at center);
-
 }
 .circle div h2{
     position: absolute;
@@ -285,8 +290,7 @@ section {     /* ----- Toute section ----- */
     cursor: default;
     animation: animate 60s linear infinite;
 }
-.circle div:nth-child(2) h2
-{
+.circle div:nth-child(2) h2 {
     -webkit-text-stroke: 2px;
     -webkit-text-stroke-color: var(--color-text1);
     color: transparent;
@@ -302,7 +306,11 @@ section {     /* ----- Toute section ----- */
         transform: translateX(-100%);
     }
 }
-
+@media screen and (max-width: 600px) {
+    .circle div:nth-child(2){
+        clip-path: circle(150px at center);
+    }
+}
 
 /* ----- SECTION 2 ----- */
 article {     /* ----- Titre ----- */
@@ -445,7 +453,11 @@ h3{
   font-weight: 400;
   letter-spacing: -0.0225rem;
 }
-
+@media screen and (max-width: 600px) {
+    .logo_frame{
+        gap: 1rem;
+    }
+}
 
 /* ----- SECTION 5 ----- */
 .sec5-frame{
@@ -502,8 +514,9 @@ h3{
 }
 .sec5-text-info-bou-plus:hover{
   cursor: pointer;
-  background: black;
-  color: #FFF;
+  background: var(--color-bg3);
+  color: var(--color-text2);
+  border: 1px solid var(--color-bg3);
 }
 .sec5-text-info-bou-cv{
   display: flex;
@@ -514,7 +527,7 @@ h3{
   align-items: center;
   gap: 0.625rem;
   border-radius: 3rem;
-  border: 1px solid #0E0E0E;
+  border: 1px solid var(--color-bg3);
   background: #FFF;
 
   text-align: center;
@@ -530,8 +543,9 @@ h3{
 }
 .sec5-text-info-bou-cv:hover{
   cursor: pointer;
-  background: black;
-  -webkit-text-fill-color: white; 
+  background: var(--color-bg3);
+  border: 1px solid var(--color-bg3);
+  -webkit-text-fill-color: var(--color-text2);
 }
 
 .sec5-box{
@@ -598,8 +612,14 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 600px) {
   .dynamic-txts2{
       height: 200%;
+  }
+  .sec5-text{
+      gap: 2rem;
+  }
+  .sec5-boite{
+      width: 100%;
   }
 }

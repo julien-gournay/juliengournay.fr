@@ -1,5 +1,3 @@
-
-
 h1 {
     display: flex;
     /*background: linear-gradient(90deg, #FF0000, #8F00FF);*/
@@ -14,12 +12,14 @@ h1 {
 #sec-projet{
     display: flex;
     flex-direction: row;
-    padding-top: 7%;
+    padding: 7rem 6%;
     gap: 2rem;
     justify-content: center;
+    height: auto;
 }
 .sec-ct{
-    max-width: 55rem;
+    min-width: 38rem;
+    width: 60rem;
 }
 .article{
     display: flex;
@@ -36,7 +36,7 @@ h1 {
 }
 .sec-projet-image{
     border-radius: 1rem;
-    width: 55rem;
+    width: 100%;
     height: 30rem;
     overflow: hidden;
     object-fit: cover;
@@ -45,7 +45,7 @@ h1 {
 
 .aside{
     width: 20rem;
-    height: 10rem;
+    height: auto;
     /*position: sticky;*/
     /*top: 2rem;*/
     display: flex;
@@ -99,4 +99,35 @@ h1 {
 }
 .aside-main-bt button:hover{
     background: var(--orange);
+}
+
+
+/* ----- RESPONSIVE ----- */
+@media screen and (max-width: 1024px){
+    #sec-projet{
+        flex-direction: column;
+    }
+    .sec-ct{
+        max-width: 100%;
+    }
+    .sec-projet-image{
+        width: 100%;
+        height: 30rem;
+    }
+    .aside{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    .sec-header-title H1{
+        font-size: 2rem;
+    }
+    .sec-projet-image{
+        height: 20rem;
+    }
+    .sec-header-icon-img{
+        width: 30px;
+        height: 30px;
+        margin-top: 5px;
+    }
 }

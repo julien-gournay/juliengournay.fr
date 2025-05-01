@@ -254,3 +254,17 @@ a:hover .tag {
         gap: 1rem;
     }
 }
+@media screen and (max-width: 600px) {
+    .cadre{
+        width: 100%;
+    }
+    .liste-cadre a{
+        width: 100%;
+    }
+    .cadre-img{
+        width: 100%;
+    }
+    .cadre-info{
+        width: 100%;
+    }
+}

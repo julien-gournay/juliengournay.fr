@@ -119,9 +119,8 @@
                     <button onclick="location.href='files/tableau_synthese_slam.xlsx'" class="button_cv">Télécharger mon tableau des compétences</button>
                 </div>
             </div>
-            <div class="sec4-box">
-                
-            </div>
+            <!--<div class="sec4-box">
+            </div>-->
         </div>
     </section>
 
@@ -134,9 +133,8 @@
                     <button onclick="location.href='veille-technologique.php'" class="button_cv">Voir toute ma veille</button>
                 </div>
             </div>
-            <div class="sec5-box">
-
-            </div>
+            <!--<div class="sec5-box">
+            </div>-->
         </div>
     </section>
 

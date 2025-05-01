@@ -6,7 +6,7 @@
     <meta name="description" content="Je m'appelle Julien Gournay, j'ai 21 ans et j'habite dans la Métropole Lilloise. Je suis actuellement Etudiant en BTS SIO (Informatique).">
     <meta name="keywords" content="julien,gournay,sio,bts,informatique,cv,portfolio,developpeur">
 
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <!-- Google tag Analystic (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6V1XWV51D"></script>

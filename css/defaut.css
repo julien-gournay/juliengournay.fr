@@ -213,7 +213,7 @@ a::selection,a p::selection,a h2::selection,a h3::selection{
 footer{
   display: block;
   /*padding: 4rem 9.375rem;*/
-  padding: 3% 6%;
+  padding: 6% 6%;
   justify-content: center;
   align-items: center;
 }

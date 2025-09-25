@@ -64,9 +64,9 @@
     <section id="sec-2">
         <div class="conteneur reveal">
             <article>
-                <h1 class="scroolh1">2ème année BTS SIO (Service Informatique aux Organisations)</h1>
+                <h1 class="scroolh1">Bachelor 3 - Informatique Developpement</h1>
                 <p class="scroolp">En tant qu'étudiant développeur, j'apprends le développement web en CSS, PHP, JavaScript et SQL, ainsi que le développement orienté objet en Java et C#.</p>
-                <p class="scroolp">J'approfondis mes compétences en réalisant des projets et en passant des certifications. En septembre 2025, j'entamerai un Bachelor 3 en développement chez Ynov en alternance.</p>
+                <p class="scroolp">J'approfondis mes compétences en réalisant des projets et en passant des certifications. En 2025 j'ai obtenu mon BTS SIO et actuellement j'entame un Bachelor 3 en développement chez Ynov.</p>
             </article>
         </div>
     </section>

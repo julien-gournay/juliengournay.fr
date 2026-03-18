@@ -24,13 +24,13 @@ function addActiveClass($page, $current) {
                 <a href="experience.php"><i class='bx bx-calendar-check'></i>Expérience</a>
             </li>
             <li class="<?php echo addActiveClass('portfolio.php', $currentPage); ?>">
-                <a href="portfolio2.php"><i class='bx bx-calendar-plus'></i>Portfolio</a>
+                <a href="portfolio.php"><i class='bx bx-calendar-plus'></i>Portfolio</a>
             </li>
-            <li class="<?php echo addActiveClass('btssio.php', $currentPage); ?>">
-                <a href="btssio.php"><i class='bx bx-calendar-plus'></i>BTS SIO</a>
+            <li class="<?php echo addActiveClass('blog.php', $currentPage); ?>">
+                <a href="blog.php"><i class='bx bx-calendar-plus'></i>Blog</a>
             </li>
-            <li class="<?php echo addActiveClass('contact.php', $currentPage); ?>">
-                <a href="contact.php"><i class='bx bx-calendar-plus'></i>Contact</a>
+            <li>
+                <a href="https://www.linkedin.juliengournay.fr"><i class='bx bx-calendar-plus'></i>LinkedIn</a>
             </li>
         </ul>
 

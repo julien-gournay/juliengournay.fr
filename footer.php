@@ -8,7 +8,7 @@
             <div class="footer-liens">
                 <div class="footer-boite">
                     <h4>Découvrir</h4>
-                    <a href="portfolio.php"><p>Portfolio</p></a>
+                    <a href="html/portfolio.php"><p>Portfolio</p></a>
                     <a href="experience.php"><p>Experience</p></a>
                     <a href="education.php"><p>Education</p></a>
                     <a href="cv.html"><p>Mon cv</p></a>

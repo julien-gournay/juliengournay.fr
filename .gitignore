@@ -10,3 +10,5 @@ vendor/
 
 # IDE & OS
 .idea/
+*.css~
+*.html~

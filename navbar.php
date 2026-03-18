@@ -24,7 +24,7 @@ function addActiveClass($page, $current) {
                 <a href="experience.php"><i class='bx bx-calendar-check'></i>Expérience</a>
             </li>
             <li class="<?php echo addActiveClass('portfolio.php', $currentPage); ?>">
-                <a href="portfolio.php"><i class='bx bx-calendar-plus'></i>Portfolio</a>
+                <a href="portfolio2.php"><i class='bx bx-calendar-plus'></i>Portfolio</a>
             </li>
             <li class="<?php echo addActiveClass('blog.php', $currentPage); ?>">
                 <a href="blog.php"><i class='bx bx-calendar-plus'></i>Blog</a>

@@ -1,0 +1,114 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "label": "Quel langage est officiellement recommandé par Google pour le développement Android natif ?",
+      "correct_answer_id": 1,
+      "answers": [
+        { "id": 1, "label": "Kotlin" },
+        { "id": 2, "label": "Java" },
+        { "id": 3, "label": "Dart" },
+        { "id": 4, "label": "C++" }
+      ]
+    },
+    {
+      "id": 2,
+      "label": "Quel composant de l'architecture Android gère l'interface utilisateur graphique ?",
+      "correct_answer_id": 2,
+      "answers": [
+        { "id": 1, "label": "Service" },
+        { "id": 2, "label": "Activity" },
+        { "id": 3, "label": "Broadcast Receiver" },
+        { "id": 4, "label": "Content Provider" }
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Quel outil est le SDK Manager officiel pour développer des applications Android ?",
+      "correct_answer_id": 3,
+      "answers": [
+        { "id": 1, "label": "Xcode" },
+        { "id": 2, "label": "VS Code" },
+        { "id": 3, "label": "Android Studio" },
+        { "id": 4, "label": "Eclipse" }
+      ]
+    },
+    {
+      "id": 4,
+      "label": "En Jetpack Compose, quelle annotation utilise-t-on pour définir une fonction d'interface graphique ?",
+      "correct_answer_id": 1,
+      "answers": [
+        { "id": 1, "label": "@Composable" },
+        { "id": 2, "label": "@Layout" },
+        { "id": 3, "label": "@View" },
+        { "id": 4, "label": "@UiElement" }
+      ]
+    },
+    {
+      "id": 5,
+      "label": "Quel fichier configuration contient les permissions requises par l'application (ex: accès Internet) ?",
+      "correct_answer_id": 4,
+      "answers": [
+        { "id": 1, "label": "build.gradle" },
+        { "id": 2, "label": "settings.gradle" },
+        { "id": 3, "label": "MainActivity.kt" },
+        { "id": 4, "label": "AndroidManifest.xml" }
+      ]
+    },
+    {
+      "id": 6,
+      "label": "Quelle est la fonction principale d'un 'ViewModel' dans l'architecture MVVM ?",
+      "correct_answer_id": 2,
+      "answers": [
+        { "id": 1, "label": "Gérer directement la base de données" },
+        { "id": 2, "label": "Survivre aux changements de configuration comme la rotation d'écran" },
+        { "id": 3, "label": "Dessiner les boutons à l'écran" },
+        { "id": 4, "label": "Envoyer des notifications push" }
+      ]
+    },
+    {
+      "id": 7,
+      "label": "Quel moteur de build est par défaut utilisé dans les projets Android modernes ?",
+      "correct_answer_id": 3,
+      "answers": [
+        { "id": 1, "label": "Maven" },
+        { "id": 2, "label": "Ant" },
+        { "id": 3, "label": "Gradle" },
+        { "id": 4, "label": "NPM" }
+      ]
+    },
+    {
+      "id": 8,
+      "label": "Quel composant permet de diffuser des messages à l'échelle du système ou de l'application ?",
+      "correct_answer_id": 1,
+      "answers": [
+        { "id": 1, "label": "Broadcast Receiver" },
+        { "id": 2, "label": "Intent Service" },
+        { "id": 3, "label": "Content Provider" },
+        { "id": 4, "label": "Fragment" }
+      ]
+    },
+    {
+      "id": 9,
+      "label": "Quel format de fichier est généré après la compilation pour être directement installé sur un appareil Android ?",
+      "correct_answer_id": 2,
+      "answers": [
+        { "id": 1, "label": "IPA" },
+        { "id": 2, "label": "APK" },
+        { "id": 3, "label": "JAR" },
+        { "id": 4, "label": "EXE" }
+      ]
+    },
+    {
+      "id": 10,
+      "label": "Dans Kotlin, que signifie le mot-clé 'val' ?",
+      "correct_answer_id": 4,
+      "answers": [
+        { "id": 1, "label": "Une variable dynamique" },
+        { "id": 2, "label": "Une variable volatile" },
+        { "id": 3, "label": "Une variable réassignable" },
+        { "id": 4, "label": "Une variable en lecture seule (immutable)" }
+      ]
+    }
+  ]
+}

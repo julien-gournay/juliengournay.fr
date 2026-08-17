@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation — Concertothèque</title>
+  <style>
+    :root {
+      --orange:       #FF6B35;
+      --orange-dark:  #E65100;
+      --bg:           #0F0F17;
+      --surface:      #1A1A28;
+      --surface2:     #232336;
+      --border:       #2E2E45;
+      --text:         #E8E8F0;
+      --text-muted:   #8888AA;
+      --pink:         #E91E63;
+      --green:        #43A047;
+      --purple:       #7B1FA2;
+      --blue:         #0288D1;
+      --radius:       10px;
+      --font-mono:    'Consolas', 'Fira Code', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      display: flex;
+    }
+
+    /* ── SIDEBAR NAV ─────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 260px;
+      height: 100vh;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      overflow-y: auto;
+      padding: 28px 0 40px;
+      flex-shrink: 0;
+      z-index: 100;
+    }
+    nav .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 22px 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+    nav .logo-icon {
+      width: 36px; height: 36px;
+      background: var(--orange);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    nav .logo-text { font-size: 15px; font-weight: 700; color: var(--text); }
+    nav .logo-sub  { font-size: 11px; color: var(--text-muted); }
+    nav ul { list-style: none; }
+    nav ul li a {
+      display: block;
+      padding: 8px 22px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      border-left: 3px solid transparent;
+      transition: all .15s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: var(--orange);
+      background: rgba(255,107,53,.08);
+      border-left-color: var(--orange);
+    }
+    nav .nav-section {
+      padding: 16px 22px 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    nav .badge {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 1px 7px;
+      background: var(--orange);
+      color: #fff;
+      border-radius: 99px;
+      font-size: 10px;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+
+    /* ── MAIN CONTENT ────────────────────────────────────── */
+    main {
+      margin-left: 260px;
+      flex: 1;
+      max-width: 1040px;
+      padding: 60px 56px;
+    }
+
+    /* ── TYPOGRAPHY ──────────────────────────────────────── */
+    h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 8px; }
+    h1 span { color: var(--orange); }
+    h2 {
+      font-size: 1.5rem; font-weight: 700;
+      margin: 56px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+    }
+    h2 .icon { font-size: 1.3rem; }
+    h3 { font-size: 1.1rem; font-weight: 700; margin: 28px 0 10px; color: var(--orange); }
+    h4 { font-size: .95rem; font-weight: 600; margin: 20px 0 8px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; }
+    p  { margin-bottom: 12px; color: #C8C8D8; }
+    a  { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    strong { color: var(--text); }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; color: #C8C8D8; }
+    li { margin-bottom: 4px; }
+
+    /* ── HERO ────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px 44px;
+      margin-bottom: 48px;
+    }
+    .hero .meta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+    .badge-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 14px;
+      border-radius: 99px;
+      font-size: 12.5px; font-weight: 600;
+      background: rgba(255,107,53,.14);
+      color: var(--orange);
+      border: 1px solid rgba(255,107,53,.3);
+    }
+    .badge-pill.blue   { background: rgba(2,136,209,.14); color:#4FC3F7; border-color:rgba(2,136,209,.3); }
+    .badge-pill.green  { background: rgba(67,160,71,.14);  color:#81C784; border-color:rgba(67,160,71,.3); }
+    .badge-pill.purple { background: rgba(123,31,162,.14); color:#CE93D8; border-color:rgba(123,31,162,.3); }
+
+    /* ── CARDS GRID ──────────────────────────────────────── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .card .card-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .card h3 { margin: 0 0 6px; font-size: .95rem; color: var(--text); }
+    .card p  { font-size: 13px; color: var(--text-muted); margin: 0; }
+
+    /* ── TECH BADGE ──────────────────────────────────────── */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .tech-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13px;
+    }
+    .tech-item strong { display: block; color: var(--text); margin-bottom: 3px; }
+    .tech-item span   { color: var(--text-muted); font-size: 12px; }
+
+    /* ── CODE BLOCKS ─────────────────────────────────────── */
+    pre {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 22px;
+      overflow-x: auto;
+      margin: 12px 0 20px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      line-height: 1.6;
+      color: #C8D8FF;
+    }
+    code {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: #FFB77E;
+    }
+    pre code { background: none; border: none; padding: 0; color: inherit; font-size: inherit; }
+
+    /* ── TABLE ───────────────────────────────────────────── */
+    .table-wrap { overflow-x: auto; margin-bottom: 24px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    thead th {
+      background: var(--surface2);
+      color: var(--text-muted);
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+    tbody tr:hover { background: var(--surface2); }
+    tbody td { padding: 10px 14px; vertical-align: top; color: #C8C8D8; }
+    tbody td:first-child { color: var(--text); font-family: var(--font-mono); font-size: 12.5px; }
+
+    /* ── FLOW STEPS ──────────────────────────────────────── */
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li {
+      counter-increment: step;
+      display: flex; gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .steps li:last-child { border: none; }
+    .steps li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      background: var(--orange);
+      color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* ── COLOR CHIPS ─────────────────────────────────────── */
+    .color-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+    .color-chip {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+    .color-swatch {
+      width: 20px; height: 20px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* ── FIRESTORE TREE ──────────────────────────────────── */
+    .tree {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      line-height: 2;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-bottom: 20px;
+    }
+    .tree .t-coll { color: var(--orange); }
+    .tree .t-doc  { color: #82AAFF; }
+    .tree .t-field{ color: var(--text-muted); }
+    .tree .t-type { color: #C3E88D; font-size: 11px; }
+
+    /* ── SECTION ANCHOR ──────────────────────────────────── */
+    section { scroll-margin-top: 24px; }
+
+    /* ── DIVIDER ─────────────────────────────────────────── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* ── INFO BOX ────────────────────────────────────────── */
+    .info-box {
+      border-left: 4px solid var(--orange);
+      background: rgba(255,107,53,.07);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      font-size: 13.5px;
+      color: #C8C8D8;
+    }
+    .info-box.note { border-color: var(--blue); background: rgba(2,136,209,.07); }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer {
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SIDEBAR NAVIGATION
+═════════════════════════════════════════════════════════════════ -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon">🎵</div>
+    <div>
+      <div class="logo-text">Concertothèque</div>
+      <div class="logo-sub">Documentation v1.0.0</div>
+    </div>
+  </div>
+  <ul>
+    <li class="nav-section">Présentation</li>
+    <li><a href="#apercu">Aperçu du projet</a></li>
+    <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+    <li><a href="#stack">Stack technique</a></li>
+
+    <li class="nav-section">Architecture</li>
+    <li><a href="#structure">Structure des fichiers</a></li>
+    <li><a href="#modeles">Modèles de données</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#screens">Écrans (Screens)</a></li>
+    <li><a href="#widgets">Widgets</a></li>
+
+    <li class="nav-section">Firebase &amp; Backend</li>
+    <li><a href="#firebase">Configuration Firebase</a></li>
+    <li><a href="#firestore">Structure Firestore</a></li>
+    <li><a href="#notifications">Notifications</a></li>
+
+    <li class="nav-section">Interface</li>
+    <li><a href="#theme">Thème &amp; Couleurs</a></li>
+    <li><a href="#navigation">Navigation</a></li>
+
+    <li class="nav-section">Déploiement</li>
+    <li><a href="#build">Compilation</a></li>
+    <li><a href="#dependances">Dépendances</a></li>
+  </ul>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════════════
+     MAIN CONTENT
+═════════════════════════════════════════════════════════════════ -->
+<main>
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <div class="hero">
+    <h1>🎵 <span>Concertothèque</span></h1>
+    <p style="font-size:1.05rem;color:#C8C8D8;margin-top:6px;margin-bottom:0;">
+      Gestionnaire personnel de concerts — Flutter + Firebase
+    </p>
+    <div class="meta">
+      <span class="badge-pill">v1.0.0+1</span>
+      <span class="badge-pill blue">Flutter 3.x / Dart 3</span>
+      <span class="badge-pill green">Firebase</span>
+      <span class="badge-pill purple">Windows · macOS · Android · iOS</span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       APERÇU
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="apercu">
+    <h2><span class="icon">📌</span> Aperçu du projet</h2>
+    <p>
+      <strong>Concertothèque</strong> est une application de bureau (Windows, prioritaire) et mobile
+      (Android / iOS) développée avec <strong>Flutter</strong>. Elle permet à un utilisateur de tenir
+      un journal personnel de tous les concerts qu'il a assistés ou prévoit d'assister, en gérant
+      les artistes, les salles et les statistiques associées.
+    </p>
+    <p>
+      Les données sont synchronisées en temps réel via <strong>Cloud Firestore</strong> et l'authentification
+      est assurée par <strong>Firebase Auth</strong>. Des notifications locales rappellent les concerts
+      à venir (J-7 et J-1).
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🎤</div>
+        <h3>Concerts</h3>
+        <p>Créez, éditez et archivez vos événements avec affiche, placement et tarif.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎸</div>
+        <h3>Artistes</h3>
+        <p>Bibliothèque d'artistes avec genre musical et historique des concerts.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📍</div>
+        <h3>Lieux</h3>
+        <p>Gérez salles et festivals avec adresse, capacité et site web.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Statistiques</h3>
+        <p>Dashboard avec total dépenses, top artistes et prochains concerts.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔔</div>
+        <h3>Rappels</h3>
+        <p>Notifications automatiques J-7 et J-1 avant chaque concert.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💾</div>
+        <h3>Export CSV</h3>
+        <p>Export de concerts, artistes et lieux au format CSV UTF-8.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FONCTIONNALITÉS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="fonctionnalites">
+    <h2><span class="icon">✨</span> Fonctionnalités</h2>
+
+    <h3>Gestion des concerts</h3>
+    <ul>
+      <li>Création / édition / suppression avec confirmation</li>
+      <li>Types d'événement : Concert, Festival, Soirée, Showcase, Comédie musicale</li>
+      <li>Placements : Fosse, Gradin, Catégorie 1–4, Carré Or</li>
+      <li>Liaison à une salle (avec création inline) et à des artistes (multi-sélection)</li>
+      <li>Images : affiche et couverture par URL</li>
+      <li>Archivage automatique lorsque la date est passée</li>
+      <li>Filtres avancés (nom, ville, artiste, type) + tri multi-colonnes</li>
+      <li>Sélection multiple pour suppression groupée</li>
+    </ul>
+
+    <h3>Gestion des artistes &amp; lieux</h3>
+    <ul>
+      <li>CRUD complet avec pagination (25 éléments / page)</li>
+      <li>Recherche instantanée par nom / genre</li>
+      <li>Page de détail avec liste des concerts associés</li>
+    </ul>
+
+    <h3>Dashboard &amp; statistiques</h3>
+    <ul>
+      <li>Nombre total de concerts, à venir, archivés</li>
+      <li>Total des dépenses (billets + dépenses supplémentaires)</li>
+      <li>Top 5 artistes les plus vus (barres de progression)</li>
+      <li>Top 5 salles les plus visitées</li>
+      <li>Prochains concerts à venir</li>
+    </ul>
+
+    <h3>Notifications</h3>
+    <ul>
+      <li>Rappels automatiques J-7 et J-1 au démarrage de l'app</li>
+      <li>Notifications depuis Firestore Inbox (Firebase Console / Cloud Functions)</li>
+      <li>Windows : Toast natif via <code>flutter_local_notifications</code></li>
+      <li>Mobile : FCM + <code>flutter_local_notifications</code></li>
+      <li>Anti-doublon via <code>SharedPreferences</code></li>
+    </ul>
+
+    <h3>Fonctionnalités Windows spécifiques</h3>
+    <ul>
+      <li>Icône dans la barre des tâches (system tray) avec menu contextuel</li>
+      <li>Option "Minimiser dans le systray" au lieu de fermer</li>
+      <li>Démarrage automatique au lancement de Windows (registre <code>HKCU\…\Run</code>)</li>
+    </ul>
+
+    <h3>Paramètres &amp; compte</h3>
+    <ul>
+      <li>Sélecteur de thème : Système / Clair / Sombre</li>
+      <li>Modification du profil (nom d'affichage)</li>
+      <li>Suppression de compte avec ré-authentification</li>
+      <li>Export CSV séparé pour chaque collection</li>
+      <li>Journalisation des erreurs (Crashlytics mobile, Firestore desktop)</li>
+    </ul>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       STACK TECHNIQUE
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="stack">
+    <h2><span class="icon">🛠️</span> Stack technique</h2>
+    <div class="tech-grid">
+      <div class="tech-item"><strong>Flutter 3.x</strong><span>Framework UI multiplateforme</span></div>
+      <div class="tech-item"><strong>Dart 3</strong><span>Langage principal</span></div>
+      <div class="tech-item"><strong>Firebase Auth</strong><span>Authentification email/password</span></div>
+      <div class="tech-item"><strong>Cloud Firestore</strong><span>Base de données NoSQL temps réel</span></div>
+      <div class="tech-item"><strong>Firebase Messaging</strong><span>Push notifications (FCM)</span></div>
+      <div class="tech-item"><strong>Firebase Crashlytics</strong><span>Rapport de crash mobile</span></div>
+      <div class="tech-item"><strong>flutter_local_notifications</strong><span>Notifications locales (Toast)</span></div>
+      <div class="tech-item"><strong>tray_manager</strong><span>Icône systray Windows</span></div>
+      <div class="tech-item"><strong>window_manager</strong><span>Contrôle fenêtre desktop</span></div>
+      <div class="tech-item"><strong>shared_preferences</strong><span>Persistance légère locale</span></div>
+      <div class="tech-item"><strong>file_picker</strong><span>Dialogue natif "Enregistrer sous"</span></div>
+      <div class="tech-item"><strong>Inno Setup 6</strong><span>Installeur Windows</span></div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       STRUCTURE DES FICHIERS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="structure">
+    <h2><span class="icon">📁</span> Structure des fichiers</h2>
+<pre>
+concertotheque_app/
+├── lib/
+│   ├── main.dart                         ← Point d'entrée, init Firebase & services
+│   ├── app_settings.dart                 ← État global (thème, notifications, tray)
+│   ├── firebase_options.dart             ← Clés Firebase par plateforme
+│   │
+│   ├── models/
+│   │   ├── artiste.dart                  ← Modèle Artiste
+│   │   ├── concert.dart                  ← Modèle Evenement (concert)
+│   │   └── lieu.dart                     ← Modèle Lieu (salle)
+│   │
+│   ├── screens/
+│   │   ├── login_screen.dart             ← Connexion email/password
+│   │   ├── register_screen.dart          ← Inscription
+│   │   ├── dashboard_screen.dart         ← Tableau de bord & statistiques
+│   │   ├── concerts_screen.dart          ← Liste concerts (filtre, tri, multi-select)
+│   │   ├── concert_detail_screen.dart    ← Détail d'un concert
+│   │   ├── evenement_edit_screen.dart    ← Création / édition concert
+│   │   ├── artistes_screen.dart          ← Liste artistes paginée
+│   │   ├── artiste_detail_screen.dart    ← Détail artiste + concerts
+│   │   ├── artiste_edit_screen.dart      ← Création / édition artiste
+│   │   ├── lieux_screen.dart             ← Liste des salles
+│   │   ├── lieu_detail_screen.dart       ← Détail salle + concerts
+│   │   ├── lieu_edit_screen.dart         ← Création / édition salle
+│   │   ├── settings_screen.dart          ← Paramètres app (4 sections)
+│   │   └── about_screen.dart             ← À propos & debug
+│   │
+│   ├── services/
+│   │   ├── evenement_service.dart        ← CRUD concerts (Firestore)
+│   │   ├── artiste_service.dart          ← CRUD artistes (Firestore)
+│   │   ├── lieu_service.dart             ← CRUD lieux (Firestore)
+│   │   ├── notification_service.dart     ← Toast / FCM
+│   │   ├── reminder_service.dart         ← Rappels J-7 / J-1
+│   │   ├── inbox_service.dart            ← Listener Firestore inbox
+│   │   ├── export_service.dart           ← Export CSV
+│   │   ├── tray_service.dart             ← Systray Windows
+│   │   ├── autostart_service.dart        ← Démarrage auto Windows
+│   │   └── crash_logger.dart             ← Crashlytics / Firestore logs
+│   │
+│   └── widgets/
+│       ├── main_layout.dart              ← Sidebar + zone contenu
+│       └── artiste_picker_dialog.dart    ← Sélecteur artistes multi-choix
+│
+├── android/                              ← Config Android
+├── ios/                                  ← Config iOS
+├── macos/                                ← Config macOS
+├── windows/                              ← Config Windows (runner, icône .ico)
+├── web/                                  ← Config Web (limité)
+├── linux/                                ← Config Linux
+├── docs/                                 ← Documentation technique
+│   ├── ARCHITECTURE.md
+│   ├── BUILD_RELEASE.md
+│   ├── FIREBASE.md
+│   └── notifications.md
+├── pubspec.yaml                          ← Dépendances & métadonnées app
+├── firebase.json                         ← Config FlutterFire CLI
+└── documentation.html                    ← Ce fichier
+</pre>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       MODÈLES DE DONNÉES
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="modeles">
+    <h2><span class="icon">🗂️</span> Modèles de données</h2>
+
+    <h3>Artiste — <code>lib/models/artiste.dart</code></h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Champ</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>id</td><td>String</td><td>Identifiant Firestore (final)</td></tr>
+          <tr><td>nom</td><td>String</td><td>Nom de l'artiste</td></tr>
+          <tr><td>genre</td><td>String</td><td>Genre musical</td></tr>
+          <tr><td>photo</td><td>String</td><td>URL de la photo (peut être vide)</td></tr>
+        </tbody>
+      </table>
+    </div>
+<pre>
+// Méthodes
+factory Artiste.fromDoc(DocumentSnapshot doc)
+Map&lt;String, dynamic&gt; toMap()
+</pre>
+
+    <h3>Evenement (Concert) — <code>lib/models/concert.dart</code></h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Champ</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>id</td><td>String</td><td>Identifiant Firestore</td></tr>
+          <tr><td>nomEvent</td><td>String</td><td>Nom de l'événement</td></tr>
+          <tr><td>date</td><td>DateTime</td><td>Date du concert</td></tr>
+          <tr><td>typeCode</td><td>String</td><td>CON / FES / SOI / SHO / COM</td></tr>
+          <tr><td>placement</td><td>String</td><td>FOSS / GRAD / CAT1–4 / CARO</td></tr>
+          <tr><td>prixBillet</td><td>double</td><td>Prix du billet (€)</td></tr>
+          <tr><td>depenseSup</td><td>double</td><td>Dépenses supplémentaires (€)</td></tr>
+          <tr><td>affiche</td><td>String</td><td>URL de l'affiche</td></tr>
+          <tr><td>cover</td><td>String</td><td>URL de la bannière</td></tr>
+          <tr><td>lieuNom</td><td>String</td><td>Nom de la salle</td></tr>
+          <tr><td>ville</td><td>String</td><td>Ville du concert</td></tr>
+          <tr><td>pays</td><td>String</td><td>Pays du concert</td></tr>
+          <tr><td>artistes</td><td>List&lt;String&gt;</td><td>Noms des artistes</td></tr>
+        </tbody>
+      </table>
+    </div>
+<pre>
+// Getter calculé
+bool get isArchive =&gt; date.isBefore(DateTime.now());
+
+// Codes types → libellés
+const typeLabels = {
+  'CON': 'Concert',  'FES': 'Festival',
+  'SOI': 'Soirée',   'SHO': 'Showcase',  'COM': 'Comédie musicale'
+};
+
+// Codes placement → libellés
+const placementLabels = {
+  'FOSS': 'Fosse',  'GRAD': 'Gradin',
+  'CAT1': 'Catégorie 1',  'CAT2': 'Catégorie 2',
+  'CAT3': 'Catégorie 3',  'CAT4': 'Catégorie 4',
+  'CARO': 'Carré Or'
+};
+</pre>
+
+    <h3>Lieu (Salle) — <code>lib/models/lieu.dart</code></h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Champ</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>id</td><td>String</td><td>Identifiant Firestore</td></tr>
+          <tr><td>nom</td><td>String</td><td>Nom de la salle</td></tr>
+          <tr><td>ville</td><td>String</td><td>Ville</td></tr>
+          <tr><td>pays</td><td>String</td><td>Pays (défaut : France)</td></tr>
+          <tr><td>adresse</td><td>String</td><td>Adresse complète</td></tr>
+          <tr><td>type</td><td>String</td><td>Type de lieu (salle, plein air…)</td></tr>
+          <tr><td>capacite</td><td>int</td><td>Capacité d'accueil</td></tr>
+          <tr><td>photo</td><td>String</td><td>URL de la photo</td></tr>
+          <tr><td>siteWeb</td><td>String</td><td>URL du site officiel</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SERVICES
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="services">
+    <h2><span class="icon">⚙️</span> Services</h2>
+
+    <h3>Services de données Firestore</h3>
+    <p>Les trois services (<code>EvenementService</code>, <code>ArtisteService</code>, <code>LieuService</code>)
+    suivent le même patron :</p>
+    <ul>
+      <li>Collection : <code>users/{uid}/{evenements|artistes|lieux}</code></li>
+      <li>Pagination curseur : 25 éléments par page</li>
+    </ul>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Méthode</th><th>Retour</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>fetchPage({cursor})</td><td>Future&lt;List&gt;</td><td>Page paginée (cursor-based)</td></tr>
+          <tr><td>fetchAll()</td><td>Future&lt;List&gt;</td><td>Jeu complet (pour export)</td></tr>
+          <tr><td>stream()</td><td>Stream&lt;List&gt;</td><td>Temps réel (artistes, lieux)</td></tr>
+          <tr><td>add(item)</td><td>Future&lt;void&gt;</td><td>Créer un document</td></tr>
+          <tr><td>update(item)</td><td>Future&lt;void&gt;</td><td>Modifier un document</td></tr>
+          <tr><td>delete(id)</td><td>Future&lt;void&gt;</td><td>Supprimer un document</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>NotificationService</h3>
+    <p>Gère les notifications locales et push selon la plateforme :</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Méthode</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>initialize()</td><td>Init platform-specific (Toast ou FCM)</td></tr>
+          <tr><td>canShow()</td><td>Vérifie paramètres app + permission OS</td></tr>
+          <tr><td>show(title, body, id)</td><td>Affiche une notification</td></tr>
+          <tr><td>isOsPermissionGranted()</td><td>Vérifie permission OS</td></tr>
+          <tr><td>getToken()</td><td>Token FCM (mobile uniquement)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>ReminderService</h3>
+    <p>Au démarrage de l'app, interroge Firestore pour les concerts dans les 7 prochains jours :</p>
+    <ul>
+      <li>Rappel à J-7 (clé SharedPreferences : <code>{id}_j7</code>)</li>
+      <li>Rappel à J-1 (clé SharedPreferences : <code>{id}_j1</code>)</li>
+      <li>Anti-doublon : les rappels déjà envoyés ne sont plus réémis</li>
+    </ul>
+
+    <h3>InboxService</h3>
+    <p>Écoute la collection <code>users/{uid}/inbox</code> en temps réel :</p>
+    <ul>
+      <li>Déclenchement sur tout document avec <code>read: false</code></li>
+      <li>Marque automatiquement le document <code>read: true</code> après affichage</li>
+      <li>Cycle de vie géré manuellement : <code>start()</code> / <code>stop()</code> (login/logout)</li>
+    </ul>
+
+    <h3>ExportService</h3>
+    <ul>
+      <li>Exports CSV avec BOM UTF-8 (compatibilité Excel)</li>
+      <li>Dialogue natif "Enregistrer sous" via <code>file_picker</code></li>
+      <li>Séparateur : virgule, valeurs entre guillemets si nécessaire</li>
+      <li>Format date : ISO 8601 (<code>YYYY-MM-DD</code>)</li>
+    </ul>
+
+    <h3>TrayService <span class="badge-pill" style="font-size:11px;">Windows</span></h3>
+    <ul>
+      <li>Singleton implémentant <code>TrayListener</code> et <code>WindowListener</code></li>
+      <li>Menu contextuel : "Ouvrir Concertothèque" / "Quitter"</li>
+      <li>Intercepte la fermeture si <code>minimizeToTray</code> est activé</li>
+      <li>Icône : <code>windows/runner/resources/concertotheque.ico</code></li>
+    </ul>
+
+    <h3>AutostartService <span class="badge-pill" style="font-size:11px;">Windows</span></h3>
+    <ul>
+      <li>Registre : <code>HKCU\Software\Microsoft\Windows\CurrentVersion\Run</code></li>
+      <li>Commande <code>reg add</code> / <code>reg delete</code> via <code>Process.run</code></li>
+      <li>Méthodes : <code>isEnabled()</code>, <code>setEnabled(bool)</code></li>
+    </ul>
+
+    <h3>CrashLogger</h3>
+    <ul>
+      <li>Mobile : délègue à Firebase Crashlytics</li>
+      <li>Desktop : écrit dans <code>users/{uid}/crash_logs</code> (Firestore)</li>
+      <li>Champs : error, stack, platform, fatal, timestamp</li>
+      <li>Intégré dans <code>runZonedGuarded</code> (erreurs async non gérées)</li>
+    </ul>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       ÉCRANS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="screens">
+    <h2><span class="icon">📱</span> Écrans (Screens)</h2>
+
+    <h3>Authentification</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Écran</th><th>Fichier</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>LoginScreen</td><td>login_screen.dart</td><td>Email + mot de passe, option "Se souvenir de moi" (SharedPreferences)</td></tr>
+          <tr><td>RegisterScreen</td><td>register_screen.dart</td><td>Inscription avec validation des champs</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Dashboard</h3>
+    <p><strong>DashboardScreen</strong> (<code>dashboard_screen.dart</code>) — page d'accueil après connexion :</p>
+    <ul>
+      <li>Compteurs : total concerts, à venir, archivés</li>
+      <li>Total des dépenses (billets + dépenses supplémentaires)</li>
+      <li>Artistes uniques et lieux uniques</li>
+      <li>Top 5 artistes avec barres de progression (occurrences)</li>
+      <li>Top 5 lieux visités</li>
+      <li>Liste des prochains concerts (triés par date)</li>
+    </ul>
+
+    <h3>Concerts</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Écran</th><th>Fonctionnalités clés</th></tr></thead>
+        <tbody>
+          <tr><td>ConcertsScreen</td><td>Recherche multi-champs, filtres par type, tri multi-colonnes, multi-sélection + suppression groupée</td></tr>
+          <tr><td>ConcertDetailScreen</td><td>Affiche + bannière, infos complètes, artistes avec photos, liens vers artiste/lieu, édition/suppression</td></tr>
+          <tr><td>EvenementEditScreen</td><td>Formulaire complet avec sélecteur de salle (+ création inline), date picker, type/placement, multi-artiste, aperçu images</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Artistes</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Écran</th><th>Fonctionnalités clés</th></tr></thead>
+        <tbody>
+          <tr><td>ArtistesScreen</td><td>Grille paginée (25/page), recherche par nom/genre, avatar, édition/suppression, FAB d'ajout</td></tr>
+          <tr><td>ArtisteDetailScreen</td><td>Grand avatar, badge genre, compteur concerts, liste des concerts par date desc avec badges statut</td></tr>
+          <tr><td>ArtisteEditScreen</td><td>Formulaire création/édition (nom, genre, URL photo)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Lieux</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Écran</th><th>Fonctionnalités clés</th></tr></thead>
+        <tbody>
+          <tr><td>LieuxScreen</td><td>Liste paginée, recherche nom/ville, photo, capacité</td></tr>
+          <tr><td>LieuDetailScreen</td><td>Photo, type, capacité, adresse, lien site web, concerts associés</td></tr>
+          <tr><td>LieuEditScreen</td><td>Formulaire complet (nom, ville, pays, adresse, type, capacité, photo, site web)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Paramètres</h3>
+    <p><strong>SettingsScreen</strong> est divisé en 4 sections :</p>
+    <ol>
+      <li><strong>Apparence</strong> — sélecteur de thème (Système / Clair / Sombre)</li>
+      <li><strong>Notifications</strong> — activation/désactivation, vérification permission OS, bouton test</li>
+      <li><strong>Système</strong> — démarrage auto (Windows), minimiser dans systray (Windows)</li>
+      <li><strong>Données</strong> — export CSV (concerts, artistes, lieux), modification profil, suppression compte</li>
+    </ol>
+
+    <h3>À propos</h3>
+    <p><strong>AboutScreen</strong> — icône app, version, développeur (Julien Gournay), liens GitHub, stack technologique, bouton debug crash.</p>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       WIDGETS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="widgets">
+    <h2><span class="icon">🧩</span> Widgets</h2>
+
+    <h3>MainLayout — <code>lib/widgets/main_layout.dart</code></h3>
+    <p>Disposition principale de l'application (après authentification) :</p>
+    <ul>
+      <li>Sidebar fixe de <strong>250 px</strong> + zone contenu extensible</li>
+      <li>Logo + 6 entrées de navigation (Dashboard, Concerts, Artistes, Lieux, Paramètres, À propos)</li>
+      <li>Indicateur de route active : bordure gauche orange + fond teinté</li>
+      <li>Carte utilisateur en bas (initiale + email) + dialogue de déconnexion au clic</li>
+      <li>Couleurs adaptatives light/dark</li>
+      <li>Transitions de page sans animation (<code>PageRouteBuilder</code>)</li>
+    </ul>
+
+    <h3>ArtistePickerDialog — <code>lib/widgets/artiste_picker_dialog.dart</code></h3>
+    <p>Dialog modal pour la sélection multiple d'artistes :</p>
+    <ul>
+      <li>Champ de recherche filtrant par nom en temps réel</li>
+      <li>Stream Firestore live (<code>ArtisteService.stream()</code>)</li>
+      <li>Checkbox avec accent orange pour chaque artiste</li>
+      <li>Sous-titre = genre musical</li>
+      <li>Badge indiquant le nombre de sélections</li>
+      <li>Retourne <code>List&lt;String&gt;</code> (noms) ou <code>null</code> si annulé</li>
+    </ul>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FIREBASE
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="firebase">
+    <h2><span class="icon">🔥</span> Configuration Firebase</h2>
+
+    <p><strong>Projet Firebase :</strong> <code>concertotheque</code></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Plateforme</th><th>App ID</th></tr></thead>
+        <tbody>
+          <tr><td>Android</td><td>1:983582489419:android:9bed2591728c13721006ce</td></tr>
+          <tr><td>iOS / macOS</td><td>1:983582489419:ios:31fd242362c790671006ce</td></tr>
+          <tr><td>Web</td><td>1:983582489419:web:c7d022dc130a2dd31006ce</td></tr>
+          <tr><td>Windows</td><td>1:983582489419:web:384cf9d6ca940c541006ce</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Services activés</h3>
+    <ul>
+      <li>Firebase Authentication (email/password)</li>
+      <li>Cloud Firestore</li>
+      <li>Firebase Cloud Messaging (FCM)</li>
+      <li>Firebase Crashlytics (mobile)</li>
+    </ul>
+
+    <h3>Règles Firestore recommandées</h3>
+<pre>
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/{document=**} {
+      allow read, write: if request.auth != null
+                         &amp;&amp; request.auth.uid == userId;
+    }
+  }
+}
+</pre>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       STRUCTURE FIRESTORE
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="firestore">
+    <h2><span class="icon">🗄️</span> Structure Firestore</h2>
+    <div class="tree">
+      <span class="t-coll">users/</span><br>
+      &nbsp;&nbsp;<span class="t-doc">{uid}/</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-coll">evenements/</span> <span class="t-field">← concerts</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-doc">{docId}</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">nomEvent</span> <span class="t-type">string</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">date</span> <span class="t-type">timestamp</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">typeCode</span> <span class="t-type">string</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">placement</span> <span class="t-type">string</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">prixBillet</span> <span class="t-type">number</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">depenseSup</span> <span class="t-type">number</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">affiche, cover</span> <span class="t-type">string (URL)</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">lieuNom, ville, pays</span> <span class="t-type">string</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">artistes</span> <span class="t-type">array&lt;string&gt;</span><br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-coll">artistes/</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-doc">{docId}</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">nom, genre, photo</span> <span class="t-type">string</span><br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-coll">lieux/</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-doc">{docId}</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">nom, ville, pays, adresse, type</span> <span class="t-type">string</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">capacite</span> <span class="t-type">number</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">photo, siteWeb</span> <span class="t-type">string</span><br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-coll">inbox/</span> <span class="t-field">← messages push</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-doc">{docId}</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">title, body</span> <span class="t-type">string</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">read</span> <span class="t-type">boolean</span><br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-coll">crash_logs/</span> <span class="t-field">← desktop uniquement</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-doc">{docId}</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-field">error, stack, platform, fatal, timestamp</span>
+    </div>
+
+    <div class="info-box note">
+      Toutes les collections sont scoped sous <code>users/{uid}/</code> — un utilisateur ne peut
+      accéder qu'à ses propres données grâce aux règles Firestore.
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       NOTIFICATIONS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="notifications">
+    <h2><span class="icon">🔔</span> Système de notifications</h2>
+
+    <h3>Architecture</h3>
+    <p>Trois canaux de notification coexistent :</p>
+
+    <ol class="steps">
+      <li>
+        <div>
+          <strong>Rappels automatiques (ReminderService)</strong><br>
+          Au démarrage, interroge Firestore pour les concerts dans les 7 prochains jours.
+          Envoie une notification J-7 et J-1. Résistant aux redémarrages grâce à
+          SharedPreferences (<code>{id}_j7</code> / <code>{id}_j1</code>).
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Inbox Firestore (InboxService)</strong><br>
+          Listener temps réel sur <code>users/{uid}/inbox</code>. Tout document
+          <code>read: false</code> déclenche une notification et est marqué <code>read: true</code>.
+          Utile pour les campagnes depuis Firebase Console ou Cloud Functions.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Push mobile (FCM)</strong><br>
+          Firebase Cloud Messaging reçoit les messages push en arrière-plan sur Android/iOS.
+          Le token FCM est récupérable via <code>NotificationService.getToken()</code>.
+        </div>
+      </li>
+    </ol>
+
+    <h3>Par plateforme</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Plateforme</th><th>Implémentation</th></tr></thead>
+        <tbody>
+          <tr><td>Windows</td><td>flutter_local_notifications → Toast natif Windows</td></tr>
+          <tr><td>Android</td><td>FCM + flutter_local_notifications (canal "concerts")</td></tr>
+          <tr><td>iOS / macOS</td><td>FCM + flutter_local_notifications + permission explicite</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       THÈME & COULEURS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="theme">
+    <h2><span class="icon">🎨</span> Thème &amp; Couleurs</h2>
+
+    <h3>Couleurs principales</h3>
+    <div class="color-row">
+      <div class="color-chip"><div class="color-swatch" style="background:#FF6B35"></div><strong>#FF6B35</strong> — Orange primaire</div>
+      <div class="color-chip"><div class="color-swatch" style="background:#E65100"></div><strong>#E65100</strong> — Orange sombre</div>
+      <div class="color-chip"><div class="color-swatch" style="background:#12121A"></div><strong>#12121A</strong> — Fond dark</div>
+      <div class="color-chip"><div class="color-swatch" style="background:#1E1E2C;border:1px solid #444"></div><strong>#1E1E2C</strong> — Surface card</div>
+      <div class="color-chip"><div class="color-swatch" style="background:#2A2A3C;border:1px solid #444"></div><strong>#2A2A3C</strong> — Séparateur</div>
+    </div>
+
+    <h3>Couleurs par type d'événement</h3>
+    <div class="color-row">
+      <div class="color-chip"><div class="color-swatch" style="background:#E91E63"></div><strong>#E91E63</strong> — Concert</div>
+      <div class="color-chip"><div class="color-swatch" style="background:#43A047"></div><strong>#43A047</strong> — Festival</div>
+      <div class="color-chip"><div class="color-swatch" style="background:#7B1FA2"></div><strong>#7B1FA2</strong> — Soirée</div>
+      <div class="color-chip"><div class="color-swatch" style="background:#0288D1"></div><strong>#0288D1</strong> — Showcase</div>
+      <div class="color-chip"><div class="color-swatch" style="background:#E65100"></div><strong>#E65100</strong> — Comédie</div>
+    </div>
+
+    <h3>Configuration Material 3</h3>
+<pre>
+ColorScheme.fromSeed(
+  seedColor: Color(0xFFFF6B35),
+  brightness: Brightness.dark,   // ou light selon le mode
+)
+</pre>
+
+    <p>Le mode thème est piloté par <code>AppSettings.themeMode</code> (ChangeNotifier).
+    Il est appliqué via <code>AnimatedBuilder</code> dans <code>main.dart</code> et
+    <strong>n'est pas persisté</strong> entre les sessions (retour à "Système" au redémarrage).</p>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="navigation">
+    <h2><span class="icon">🗺️</span> Navigation</h2>
+
+    <h3>Flux d'authentification</h3>
+    <ol class="steps">
+      <li><div>Démarrage → <code>LoginScreen</code> (toujours, pas d'auto-login)</div></li>
+      <li><div>Connexion réussie → <code>MainLayout</code> + <code>DashboardScreen</code></div></li>
+      <li><div>Déconnexion depuis la carte utilisateur → retour à <code>LoginScreen</code></div></li>
+    </ol>
+
+    <h3>Navigation principale (Sidebar)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Entrée</th><th>Écran cible</th></tr></thead>
+        <tbody>
+          <tr><td>Dashboard</td><td>DashboardScreen</td></tr>
+          <tr><td>Concerts</td><td>ConcertsScreen</td></tr>
+          <tr><td>Artistes</td><td>ArtistesScreen</td></tr>
+          <tr><td>Lieux</td><td>LieuxScreen</td></tr>
+          <tr><td>Paramètres</td><td>SettingsScreen</td></tr>
+          <tr><td>À propos</td><td>AboutScreen</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box">
+      Les transitions de page utilisent <code>PageRouteBuilder</code> sans animation pour
+      une expérience desktop fluide et instantanée.
+    </div>
+
+    <h3>Navigation secondaire</h3>
+    <ul>
+      <li>Clic sur un concert → <code>ConcertDetailScreen</code></li>
+      <li>Bouton "Modifier" → <code>EvenementEditScreen</code></li>
+      <li>Clic sur un artiste (depuis détail concert) → <code>ArtisteDetailScreen</code></li>
+      <li>Clic sur un lieu (depuis détail concert) → <code>LieuDetailScreen</code></li>
+      <li>FAB "+" dans chaque liste → écran d'édition correspondant</li>
+    </ul>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       BUILD & COMPILATION
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="build">
+    <h2><span class="icon">🏗️</span> Compilation</h2>
+
+    <h3>Prérequis</h3>
+    <ul>
+      <li>Flutter SDK ≥ 3.x (<code>flutter --version</code>)</li>
+      <li>Dart ≥ 3.0</li>
+      <li>FlutterFire CLI (<code>dart pub global activate flutterfire_cli</code>)</li>
+      <li>Pour Windows : Visual Studio 2022 + workload "Desktop development with C++"</li>
+      <li>Pour Android : Android Studio + NDK</li>
+      <li>Inno Setup 6 (optionnel, pour l'installeur .exe)</li>
+    </ul>
+
+    <h3>Commandes</h3>
+<pre>
+# Installer les dépendances
+flutter pub get
+
+# Lancer en développement
+flutter run -d windows
+flutter run -d android
+
+# Build release Windows
+flutter build windows --release
+
+# Build release Android (APK)
+flutter build apk --release
+
+# Build release Android (Bundle)
+flutter build appbundle --release
+
+# Regénérer les options Firebase
+flutterfire configure
+</pre>
+
+    <h3>Installeur Windows (Inno Setup)</h3>
+    <p>Après <code>flutter build windows --release</code>, l'exécutable se trouve dans
+    <code>build/windows/x64/runner/Release/</code>. Inno Setup crée un installeur
+    <code>.exe</code> avec raccourci bureau et désinstalleur.</p>
+
+    <div class="info-box">
+      Le projet est distribué via <strong>Scoop</strong> (gestionnaire de paquets Windows).
+      Le manifest Scoop pointe vers l'archive ZIP du release GitHub.
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       DÉPENDANCES
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="dependances">
+    <h2><span class="icon">📦</span> Dépendances</h2>
+
+    <h4>Firebase</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Package</th><th>Version</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td>firebase_core</td><td>^4.7.0</td><td>Initialisation Firebase</td></tr>
+          <tr><td>firebase_auth</td><td>^6.5.1</td><td>Authentification</td></tr>
+          <tr><td>cloud_firestore</td><td>^6.4.1</td><td>Base de données</td></tr>
+          <tr><td>firebase_messaging</td><td>^16.2.0</td><td>Push notifications (FCM)</td></tr>
+          <tr><td>firebase_crashlytics</td><td>^5.2.2</td><td>Rapport de crash mobile</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Notifications</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Package</th><th>Version</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td>flutter_local_notifications</td><td>^21.0.0</td><td>Toast Windows / canal Android</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Desktop Windows</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Package</th><th>Version</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td>tray_manager</td><td>^0.2.3</td><td>Icône systray</td></tr>
+          <tr><td>window_manager</td><td>^0.3.9</td><td>Contrôle fenêtre</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Utilitaires</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Package</th><th>Version</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td>shared_preferences</td><td>^2.3.0</td><td>Persistance légère locale</td></tr>
+          <tr><td>file_picker</td><td>^8.0.0</td><td>Dialogue "Enregistrer sous"</td></tr>
+          <tr><td>url_launcher</td><td>^6.3.1</td><td>Ouvrir liens dans navigateur</td></tr>
+          <tr><td>package_info_plus</td><td>^8.0.2</td><td>Version de l'app</td></tr>
+          <tr><td>cupertino_icons</td><td>^1.0.2</td><td>Icônes iOS-style</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <footer>
+    Documentation générée le 03/06/2026 — Concertothèque v1.0.0+1<br>
+    Développeur : <strong>Julien Gournay</strong> — Projet Fil Rouge Ynov
+  </footer>
+
+</main>
+
+<!-- ── Active nav link on scroll ──────────────────────────────── -->
+<script>
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+  function setActive() {
+    let current = sections[0];
+    for (const s of sections) {
+      if (s.getBoundingClientRect().top <= 60) current = s;
+    }
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current.id);
+    });
+  }
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+</script>
+</body>
+</html>

@@ -20,6 +20,7 @@
                     <a href="veille-technologique.php"><p>Veille techno</p></a>
                     <a href="btssio.php"><p>BTS SIO</p></a>
                     <a href="document.php"><p>Espace documents</p></a>
+                    <a href="rncp36463.php"><p>RNCP 36463</p></a>
                 </div>
                 <div class="footer-boite">
                     <h4>Social</h4>

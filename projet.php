@@ -90,7 +90,7 @@ if ($mabase) {
         <article class="article">
             <div class='sec-header'>
                 <div class="sec-header-icon">
-                    <a href='portfolio2.php'>
+                    <a href='portfolio.php'>
                         <img class="sec-header-icon-img" width="40" height="40" src="https://img.icons8.com/ios-glyphs/40/circled-left.png" alt="circled-left"/>
                     </a>
                 </div>

@@ -46,7 +46,7 @@
             <p class="intro-text">Je suis</p>
             <div class="dynamic-txts2">
                 <span class="dt2-s">Julien Gournay</span>
-                <span class="dt2-s">étudiant Developpeur</span>
+                <span class="dt2-s">developpeur</span>
                 <span class="dt2-s">technicien informatique</span>
                 <span class="dt2-s">maquetteur web</span>
                 <span class="dt2-s">Julien Gournay</span>
@@ -65,8 +65,8 @@
         <div class="conteneur reveal">
             <article>
                 <h1 class="scroolh1">Bachelor 3 - Informatique Developpement</h1>
-                <p class="scroolp">En tant qu'étudiant développeur, j'apprends le développement web en CSS, PHP, JavaScript et SQL, ainsi que le développement orienté objet en Java et C#.</p>
-                <p class="scroolp">J'approfondis mes compétences en réalisant des projets et en passant des certifications. En 2025 j'ai obtenu mon BTS SIO et actuellement j'entame un Bachelor 3 en développement chez Ynov.</p>
+                <p class="scroolp">En tant qu'étudiant développeur, j'apprends le développement web en CSS, PHP, JS, Java, C#, TypeScript , Node.js, React, Next.js, Python, Flutter, SQL ...</p>
+                <p class="scroolp">J'approfondis mes compétences en réalisant des projets et en passant des certifications. En 2025 j'ai obtenu mon BTS SIO et actuellement j'effectu un Bachelor 3 en développement chez Ynov.</p>
             </article>
         </div>
     </section>

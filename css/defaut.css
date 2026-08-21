@@ -360,6 +360,7 @@ section {
   /*background: linear-gradient(90deg, #FFFFFF, #666666);*/
   background-size: 400%;
   font-weight: revert;
+  line-height: 1;
   font-size: 15vw;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

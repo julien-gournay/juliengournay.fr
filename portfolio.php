@@ -126,7 +126,7 @@
             $nb=0;
 
             echo("<div class=\"tab-content\" id=\"projet-card\">");
-            $res = mysqli_query($cnt,"SELECT * FROM portfolio WHERE affichage=\"oui\" AND type=$id");
+            $res = mysqli_query($cnt,"SELECT * FROM portfolio WHERE affichage=TRUE AND type=$id");
             echo("
                             <h2 class=\"title-section\">$libelle</h2>
                             <div class=\"grid-card\">
